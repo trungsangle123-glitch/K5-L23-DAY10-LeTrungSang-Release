@@ -16,6 +16,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts import pngutil  # noqa: E402
+from validator.cross_check import generate_candidates, write_candidate_csv  # noqa: E402
 
 
 RULE_TYPES = (
@@ -225,8 +226,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Find rule-based errors in a delivery folder")
     parser.add_argument("delivery", type=Path, help="delivery directory to inspect")
     parser.add_argument("--out", required=True, type=Path, help="path for errors.json")
-    # Reserved for the phase-2 interface. Phase 1 emits rule errors only.
-    parser.add_argument("--candidates", type=Path, help="optional phase-2 candidates file (not used in phase 1)")
+    parser.add_argument("--candidates", type=Path, help="optional phase-2 candidate JSON output")
     args = parser.parse_args()
     delivery = args.delivery.resolve()
     if not delivery.is_dir():
@@ -240,6 +240,23 @@ def main() -> int:
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps({"errors": errors}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Ghi {len(errors)} phát hiện vào {args.out}")
+
+    if args.candidates is not None:
+        try:
+            candidate_result = generate_candidates(delivery)
+        except (OSError, KeyError, TypeError, ValueError, json.JSONDecodeError, IndexError) as exc:
+            parser.error(f"cannot generate cross-check candidates: {exc}")
+        args.candidates.parent.mkdir(parents=True, exist_ok=True)
+        args.candidates.write_text(
+            json.dumps(candidate_result, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        write_candidate_csv(args.candidates, candidate_result)
+        summary = candidate_result["summary"]
+        print(
+            f"Tạo {summary['candidate_rows']} hàng ứng viên trên "
+            f"{summary['images_checked']} ảnh; CSV: {args.candidates.with_suffix('.csv')}"
+        )
     return 0
 
 

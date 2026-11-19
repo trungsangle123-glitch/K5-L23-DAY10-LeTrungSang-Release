@@ -105,6 +105,7 @@ Không. PASS chỉ nói lô v2 **đúng định dạng và nhất quán**: hash,
 | Bạn cần | Xem |
 |---|---|
 | Các pha và lệnh chạy | [GUIDE.md](GUIDE.md) |
+| Hướng dẫn review ảnh Pha 2 và phân công | [docs/REVIEW_GUIDE.md](docs/REVIEW_GUIDE.md) |
 | Mốc tiến độ 4 giờ | [CHECKPOINTS.md](CHECKPOINTS.md) |
 | Quy tắc làm bài, dùng AI | [RULES.md](RULES.md) |
 | Chấm điểm (100 điểm) | [RUBRIC.md](RUBRIC.md) |
