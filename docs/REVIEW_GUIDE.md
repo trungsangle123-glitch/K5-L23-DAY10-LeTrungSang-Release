@@ -38,6 +38,16 @@ py -X utf8 validator/validate.py runs/r34/delivery --out runs/r34/rules.json --c
 py -X utf8 validator/view_candidates.py --delivery runs/r34/delivery --candidates runs/r34/candidates.json --out runs/r34/review_previews
 ```
 
+### Chia hàng đợi cho seed mới
+
+Sau khi đã sinh candidates và overlay, chia ảnh đều cho năm người. Mỗi ảnh được giao trọn cho một người; nếu ảnh có nhiều loại ứng viên thì CSV người đó có nhiều dòng. Mở `runs/r99/review_assignments/index.html` để vào trang của từng người.
+
+```powershell
+py -X utf8 scripts/split_review_queue.py --candidates runs/r99/candidates.json --out runs/r99/review_assignments --members "LÊ TRUNG SANG" "LƯƠNG HOÀNG BẢO TRÂN" "NGUYỄN ANH TIẾN" "VŨ TUYẾT TRINH" "PHAN HẢI ĐĂNG"
+```
+
+Lệnh tạo `assignments.csv` tổng, một CSV và một trang HTML cho mỗi người. Chọn thư mục output mới cho mỗi seed; script không ghi đè thư mục đã có nội dung.
+
 Sau khi cả nhóm review xong, tổng hợp và chấm tự kiểm:
 
 ```powershell
