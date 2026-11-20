@@ -1,12 +1,12 @@
-image,type,verdict,note
-img_0006,missing_box,,
-img_0037,instance_merge,,
-img_0060,instance_merge,,
-img_0093,instance_merge,,
-img_0115,instance_merge,,
-img_0123,instance_merge,,
-img_0164,instance_merge,,
-img_0176,missing_box,,
-img_0207,instance_merge,,
-img_0225,instance_merge,,
-img_0245,instance_merge,,
+﻿"image","type","verdict","note"
+"img_0006","missing_box","confirmed","S1 không có box detection tương ứng trong ảnh nên xác nhận ứng viên missing_box."
+"img_0037","instance_merge","rejected","Mask chỉ đánh dấu một chiếc boat, nên không có bằng chứng cho ứng viên merge instance."
+"img_0060","instance_merge","rejected","Các segment S1, S2, S3 và S4 không bị gộp; mỗi vùng được đánh dấu riêng."
+"img_0093","instance_merge","rejected","Chiếc bench được đánh dấu đúng trong mask và không có dấu hiệu bị gộp với vật khác."
+"img_0115","instance_merge","rejected","Quan sát ảnh cho thấy các vật vẫn là những instance riêng, không có merge instance."
+"img_0123","instance_merge","rejected","Quan sát ảnh cho thấy các vật vẫn là những instance riêng, không có merge instance."
+"img_0164","instance_merge","rejected","Quan sát ảnh cho thấy các vật vẫn là những instance riêng, không có merge instance."
+"img_0176","missing_box","rejected","Mask đã đánh dấu đủ các vật liên quan; không thấy vật nào bị thiếu box detection."
+"img_0207","instance_merge","rejected","Ảnh không cho thấy vật nào bị thiếu box detection; vì vậy bác ứng viên instance_merge."
+"img_0225","instance_merge","rejected","Quan sát ảnh không thấy các vật bị gộp thành một instance; bác ứng viên merge instance."
+"img_0245","instance_merge","rejected","Quan sát ảnh cho thấy các vật vẫn là những instance riêng, không có merge instance."
