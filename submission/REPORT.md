@@ -1,4 +1,4 @@
-# Báo cáo nhóm <<XX>>
+# Báo cáo nhóm LeTrungSang
 
 ## 1. Số liệu luyện tập
 - F1 theo seed (rule / cross_check / overall): **seed 34: 1.0 / 0.4 / 0.7** (theo `score_findings.py`, sau khi xem lại 3 dòng được giao cho Tiến).
@@ -36,4 +36,4 @@ QC v1 có **29 mục lỗi / 250 ảnh (11,6%)**, trên **28 ảnh có phát hi�
 - **Kết quả trên seed 34:** `tier_a = 2`, `tier_b = 4`, `notify = 4`; tự kiểm bằng `score_findings.py` đạt `tier_a 1.0 · tier_b 1.0 · notify 1.0`.
 
 ## 6. Bug hoặc điểm chưa rõ trong lab (nếu có)
-<<>>
+Không phát hiện bug cản trở việc hoàn thành seed 34. Một điểm cần lưu ý là `runs/r34/security.md` đã được copy sang seed nộp, còn đề ẩn cần hoàn thành riêng khi nhận `de_an.zip`; không được bịa kết quả đề ẩn trước khi nhận dữ liệu.
