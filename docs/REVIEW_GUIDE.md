@@ -23,7 +23,7 @@ Kết quả hiện tại: seed 34 có 57 hàng ứng viên trên 55 ảnh: 46 `i
 ## Mở ảnh và làm review
 
 1. Mở trang HTML của mình trong `submission/r34/review_assignments/by_member/`. Trang dùng ảnh overlay ở `runs/r34/review_previews/`; thư mục `runs/` bị Git bỏ qua nên mỗi máy cần có dữ liệu và overlay cục bộ.
-2. Box cyan là các box detection; box vàng là box liên quan đến ứng viên. Màu mask: đỏ là bất đồng lớp, cam là `bbox_drift`, xanh dương là `missing_box`, tím là `instance_merge`.
+2. Box cyan là các box detection; box vàng là box liên quan đến ứng viên. Mỗi segment ứng viên có **một màu riêng, viền trắng và số hiệu `S1`, `S2`…**; dải chú thích ở đáy ảnh ghi loại ứng viên, lớp panoptic và số pixel (ví dụ `S1 MERGE person 2984px`). Hai vùng có viền riêng là hai segment, không phải bị gộp. `instance_merge` chỉ đúng khi **một** segment phủ hai vật; box vàng bao nhiều vật không chứng minh được điều đó.
 3. Nhìn vật trong ảnh rồi ghi kết quả vào CSV cá nhân. Dùng `confirmed` khi ảnh chứng minh lỗi; dùng `rejected` khi đó là khác biệt tự nhiên. Ghi chú nêu điều nhìn thấy, ít nhất 20 ký tự và không sao chép cùng một câu cho nhiều ảnh.
 4. Với `class_disagreement`, nếu detection sai thì ghi type `class_swap`; nếu panoptic sai thì ghi `category_swap`. Nếu bác ứng viên, giữ `class_disagreement`, đặt verdict `rejected` và giải thích trong note.
 5. Mỗi người gửi CSV đã điền cho người tổng hợp. Người tổng hợp ghép các dòng vào `runs/r34/review_log.csv` theo đúng header `image,type,verdict,note`.
@@ -56,3 +56,37 @@ py scripts/score_findings.py --run runs/r34
 ```
 
 `score_findings.py` dùng để tự đo tiến độ. Không dùng điểm để dò đáp án; không đọc `_private/`, annotation COCO gốc hay dữ liệu ngoài `delivery/` trong validator.
+
+## Kịch bản đề ẩn (40 phút)
+
+Đã diễn tập trên lô giả `inject_release.py --seed 99 --opaque` (tên ảnh `img_xxxx` như đề ẩn): validator khoảng 30 giây, vẽ overlay khoảng 5 giây, chia việc dưới 1 giây. Gần như toàn bộ 40 phút dành cho xem ảnh. Trước giờ làm đề: **`git pull`** để có bản mới của `validator/`.
+
+| Phút | Việc | Ai |
+|---|---|---|
+| 0–3 | Tải `de_an.zip`, giải nén vào gốc repo (được `delivery/`), chạy 3 lệnh máy bên dưới | Trinh |
+| 3–30 | Mỗi người mở trang HTML của mình, điền CSV cá nhân (khoảng 11 ảnh/người) | Cả nhóm |
+| 3–30 | Làm `submission/de_an/trace.json` (song song với review) | Đăng |
+| 30–33 | Gom 5 CSV về `runs/de_an/review_assignments/by_member/`, chạy lệnh gộp; nếu script báo DỪNG thì nhắn đúng người sửa dòng bị nêu | Trinh |
+| 33–40 | Kiểm `submission/de_an/` đủ 4 file, commit, push (không commit `delivery/`) | Sang |
+
+Lệnh máy (chạy từ gốc repo, PowerShell):
+
+```powershell
+$env:PYTHONUTF8 = '1'
+py validator/validate.py delivery --out runs/de_an/rules.json --candidates submission/de_an/candidates.json
+py validator/view_candidates.py --delivery delivery --candidates submission/de_an/candidates.json --out runs/de_an/review_previews
+py scripts/split_review_queue.py --candidates submission/de_an/candidates.json --out runs/de_an/review_assignments --members Sang Tran Tien Trinh Dang
+```
+
+Mở `runs/de_an/review_assignments/index.html` để vào trang của từng người. Nếu mỗi người làm trên máy riêng thì mỗi máy chạy cùng ba lệnh trên (kết quả chia việc giống nhau), rồi gửi CSV cá nhân đã điền cho Trinh.
+
+Gộp (dừng và không ghi file nếu còn verdict sai chữ, thiếu dòng, note dưới 20 ký tự hoặc note trùng):
+
+```powershell
+py validator/normalize_review.py --reviews runs/de_an/review_assignments/by_member --candidates submission/de_an/candidates.json --out submission/de_an/review_log.csv --rules runs/de_an/rules.json --errors submission/de_an/errors.json
+```
+
+Lưu ý khi review đề ẩn:
+- Bất đồng lớp: mở ảnh xem vật thật là gì. Detection sai thì ghi `class_swap`, panoptic sai thì ghi `category_swap`; bác thì giữ `class_disagreement` + `rejected`.
+- `instance_merge`: chỉ nhìn **segment có viền riêng**. Segment rất nhỏ (vài chục pixel) gần như không thể phủ hai vật.
+- Note nói **thấy gì** trong ảnh, mỗi dòng một câu khác nhau.
