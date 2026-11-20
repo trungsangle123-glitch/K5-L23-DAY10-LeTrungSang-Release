@@ -1,4 +1,4 @@
-image,type,verdict,note
+﻿image,type,verdict,note
 000000000139,instance_merge,confirmed,[Sang] Hai chiếc ghế ăn riêng biệt nằm trong cùng một vùng segment chair; detection ghi hai box ghế.
 000000000872,missing_box,confirmed,[Tran] Không có box detection quanh người đang cầm bóng; các box găng tay và trái bóng vẫn có.
 000000001000,instance_merge,confirmed,"[Tien] Mask person phủ vùng của hai người đứng sát nhau, áo xanh và áo đỏ; hai box person riêng cùng chạm vùng mask nên instance bị gộp."
@@ -56,3 +56,38 @@ image,type,verdict,note
 000000024610,instance_merge,rejected,"[Tien] Segment panoptic book chỉ phủ một gáy sách mảnh; các cuốn bên cạnh có mask riêng, box dài chồng qua kệ nhưng segment không gộp sách."
 000000025057,instance_merge,rejected,"[Trinh] mang tim chi la 1 nguoi nho dung xa phia sau tren co (#2) co khung rieng, cham mep khung to cua nguoi nem dia phia truoc nen bi bao nham"
 000000025386,instance_merge,rejected,"[Dang] Mask tím chỉ phủ một người nhỏ đứng ngoài sân ga sau cửa kính (person #2), bị góc trên phải box vàng person #0 chồng mép, không phải gộp 2 người"
+000000017899,bbox_drift,confirmed,[Tien] Box vàng không bao đúng cốc; mask S1 bao sát chiếc cốc và lộ phần nằm ngoài box.
+000000022892,bbox_drift,confirmed,"[Tien] Box vàng bị lệch khỏi con chó; mask S1 bao quanh sát con chó, cho thấy box không khớp vật."
+000000011699,bbox_drift,rejected,"[Tien] Khung vàng person #0 ôm khá sát vùng mask S1 của cô gái từ đầu đến chân, không thấy lệch rõ rệt."
+000000025393,bbox_drift,confirmed,"[Tien] Khung vàng person #2 lệch sang phải: cắt vai và tay trái người đàn ông áo hồng, thừa nền bên phải so với S1."
+000000002157,instance_merge,rejected,"[Tien] Vùng S1 và S2 mỗi vùng chỉ phủ một chiếc ly thủy tinh riêng lẻ phía sau bánh kem, không gộp hai ly."
+000000002299,instance_merge,rejected,"[Tien] S1 chỉ phủ một bé gái ở hàng giữa bên trái (person #14), tách biệt với các học sinh xung quanh."
+000000003255,instance_merge,rejected,"[Tien] S1 là mảng nhỏ 192px chỉ phủ một người trượt tuyết đơn lẻ ở rìa trái, không gộp nhiều người."
+000000007818,instance_merge,rejected,"[Tien] S1 chỉ bao phủ chiếc ly rượu úp ngược bên phải (wine glass #2), tách biệt với chiếc ly kế bên."
+000000012120,instance_merge,rejected,"[Tien] S1 và S2 ở khán đài tennis, mỗi segment chỉ phủ một khán giả riêng lẻ, không gộp hai người."
+000000012670,instance_merge,rejected,"[Tien] S1 chỉ phủ đầu và vai cô gái sau gấu bông (person #13), không gộp với người mặc áo đỏ phía sau."
+000000013923,instance_merge,rejected,"[Tien] S1 chỉ phủ chiếc ghế đỏ cạnh bàn ăn tròn (chair #4), tách biệt với các ghế phía sau và phía trước."
+000000014439,instance_merge,rejected,"[Tien] S1 là vùng nhỏ 368px chỉ phủ một người ở bãi cỏ xa (person #9), tách biệt với người bên cạnh."
+000000016228,instance_merge,rejected,"[Tien] S1 chỉ phủ một người đi bộ bên trái xe ngựa kéo, không gộp hai người riêng biệt vào cùng mask."
+000000016249,instance_merge,rejected,"[Tien] S1 chỉ phủ người phía sau đeo balo (person #1), tách biệt với người đàn ông áo đỏ ngồi phía trước."
+000000018837,instance_merge,rejected,"[Tien] S1 chỉ phủ người đội mũ bên trái trên nóc xe tải xanh, tách biệt với người áo phản quang kế bên."
+000000024021,instance_merge,rejected,[Tien] S1 chỉ phủ đầu và vai người đàn ông hàng giữa (person #9); đầu học sinh phía trước đã tách riêng.
+000000024567,instance_merge,rejected,"[Tien] S1 phủ hot dog #4, S2 phủ hot dog #6 ở dưới; hai chiếc hot dog có segment riêng."
+000000003845,instance_merge,rejected,"[Tien] S1 chỉ phủ một mẩu bông cải xanh trên đĩa cơm (broccoli #3), tách biệt với nhánh bên cạnh."
+000000006954,instance_merge,rejected,"[Tien] S1 chỉ phủ bé gái áo hồng ngồi giữa bên trái (person #3), tách biệt với các bé ngồi kế bên."
+000000008021,instance_merge,rejected,"[Tien] S1 chỉ phủ người mặc vest đang phát biểu trên màn hình chiếu, tách biệt với khán giả ở tiền cảnh."
+000000011699,instance_merge,rejected,"[Tien] S1 chỉ phủ người phụ nữ áo đỏ bên trái (person #1), tách biệt với cô gái áo xanh đứng cạnh."
+000000015254,instance_merge,confirmed,[Tien] Vùng mask S1 bao phủ và gộp liền ít nhất hai thanh cà rốt riêng biệt nằm cạnh nhau trong ngăn hộp màu xanh lá.
+000000017714,instance_merge,rejected,"[Tien] S1, S2, S3 và S4 đều phủ một lát trái cây đơn lẻ trên đĩa bên phải, không gộp nhiều lát."
+000000018491,instance_merge,rejected,"[Tien] S1, S2 và S3 phủ từng người riêng lẻ trên sân và khán đài bóng chày, không gộp hai người."
+000000018575,instance_merge,rejected,"[Tien] S1 chỉ phủ một lọ gia vị nhỏ màu hồng ở góc trên phải đĩa giấy, tách biệt với hai lọ còn lại."
+000000019432,instance_merge,rejected,"[Tien] S1, S2 và S3 lần lượt phủ từng ghế gấp trắng riêng lẻ trên khán đài, không gộp nhiều ghế."
+000000023781,instance_merge,rejected,"[Tien] S1 và S2 mỗi vùng chỉ phủ một củ cà rốt riêng lẻ nằm chồng cạnh nhau, không gộp hai củ."
+000000000632,instance_merge,confirmed,[Tien] Vùng mask S1 bao phủ và gộp nhiều quyển sách xếp sát nhau trên cùng một ngăn kệ bên phải.
+000000005600,instance_merge,rejected,"[Tien] S1 phủ riêng bát dưới bên phải và S2 phủ riêng bát trên bên trái; hai bát tách biệt, không bị gộp."
+000000006471,instance_merge,rejected,"[Tien] S1 chỉ phủ người ngồi ở hàng ghế dự bị phía sau (person #3), tách biệt với người kế bên (person #5)."
+000000007386,instance_merge,rejected,"[Tien] S1 chỉ phủ xe đạp treo phía trên trong gara (bicycle #2), tách biệt với xe đạp bên dưới (#3)."
+000000021167,instance_merge,rejected,"[Tien] S1 phủ riêng người đàn ông bên phải, S2 phủ riêng người phụ nữ bên trái; hai người tách biệt rõ."
+000000021839,instance_merge,rejected,"[Tien] S1 chỉ phủ một người trên vỉa hè góc dưới phải (person #3), tách biệt với người đứng bên cạnh."
+000000022935,instance_merge,rejected,"[Tien] S1 chỉ phủ cầu thủ áo cam bên phải nền sau, tách biệt với cầu thủ áo xanh ở tiền cảnh."
+000000025139,instance_merge,rejected,"[Tien] S1 chỉ bao phủ duy nhất con ngựa vằn cận cảnh ở phía bên trái, tách biệt hoàn toàn với con ngựa vằn thứ hai bên trái."

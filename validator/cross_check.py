@@ -29,12 +29,13 @@ THRESHOLDS = {
     "pair_min_mask_coverage": 0.10,
     "class_disagreement_min_iou": 0.10,
     "class_disagreement_min_mask_coverage": 0.20,
-    "bbox_drift_max_mask_coverage": 0.80,
+    "bbox_drift_max_mask_coverage": 0.98,
     "bbox_drift_min_segment_pixels": 100,
     "missing_box_min_segment_pixels": 600,
     "missing_box_min_side_pixels": 15,
     "instance_merge_min_mask_coverage": 0.30,
     "instance_merge_min_overlap_pixels": 50,
+    "instance_merge_min_box_mask_fraction": 0.03,
     "instance_merge_max_detection_iou": 0.10,
 }
 
@@ -130,6 +131,13 @@ def _iou(first: tuple[float, float, float, float], second: tuple[float, float, f
     area_second = max(0.0, second[2] - second[0]) * max(0.0, second[3] - second[1])
     union = area_first + area_second - intersection
     return intersection / union if union > 0 else 0.0
+
+
+def _box_mask_fraction(box: dict, overlap: int) -> float:
+    """Fraction of a rasterized detection box occupied by one segment mask."""
+    x1, y1, x2, y2 = box["pixel_rect"]
+    box_area = max(0, x2 - x1) * max(0, y2 - y1)
+    return overlap / box_area if box_area else 0.0
 
 
 def _mask_measurements(
@@ -387,9 +395,11 @@ def generate_candidates(delivery: Path) -> dict[str, Any]:
                     continue
                 overlap = overlaps.get((segment_id, box["index"]), 0)
                 coverage = overlap / segment["area"] if segment["area"] else 0.0
+                box_mask_fraction = _box_mask_fraction(box, overlap)
                 if (
                     overlap >= THRESHOLDS["instance_merge_min_overlap_pixels"]
                     and coverage >= THRESHOLDS["instance_merge_min_mask_coverage"]
+                    and box_mask_fraction >= THRESHOLDS["instance_merge_min_box_mask_fraction"]
                 ):
                     supporting.append(
                         {
@@ -400,6 +410,7 @@ def generate_candidates(delivery: Path) -> dict[str, Any]:
                             "bbox_xyxy": [round(value, 2) for value in box["bbox"]],
                             "mask_pixels_in_box": overlap,
                             "segment_coverage": round(coverage, 4),
+                            "box_mask_fraction": round(box_mask_fraction, 4),
                         }
                     )
             distinct_pairs = []

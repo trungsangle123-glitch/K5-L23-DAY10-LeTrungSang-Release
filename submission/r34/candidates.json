@@ -1,12 +1,12 @@
 {
   "summary": {
     "images_checked": 248,
-    "candidate_rows": 57,
-    "unique_candidate_images": 55,
+    "candidate_rows": 92,
+    "unique_candidate_images": 88,
     "by_candidate_type": {
-      "bbox_drift": 1,
+      "bbox_drift": 5,
       "class_disagreement": 4,
-      "instance_merge": 46,
+      "instance_merge": 77,
       "missing_box": 6
     },
     "skipped_missing_images": 2,
@@ -17,7 +17,7 @@
       "pair_min_mask_coverage": 0.1,
       "class_disagreement_min_iou": 0.1,
       "class_disagreement_min_mask_coverage": 0.2,
-      "bbox_drift_max_mask_coverage": 0.8,
+      "bbox_drift_max_mask_coverage": 0.98,
       "bbox_drift_min_segment_pixels": 100,
       "missing_box_min_segment_pixels": 600,
       "missing_box_min_side_pixels": 15,
@@ -25,7 +25,97 @@
       "instance_merge_min_overlap_pixels": 50,
       "instance_merge_max_detection_iou": 0.1
     },
-    "manual_review_required": true
+    "manual_review_required": true,
+    "supplemental_review": {
+      "source": "f1_review_package_20261120 + f1_review_package_round2 + f1_review_package_round3 + f1_review_package_round4 + f1_review_package_round5 + f1_review_package_round6",
+      "added_images": [
+        "000000000632",
+        "000000002157",
+        "000000002299",
+        "000000003255",
+        "000000003845",
+        "000000005600",
+        "000000006471",
+        "000000006954",
+        "000000007386",
+        "000000007818",
+        "000000008021",
+        "000000011699",
+        "000000012120",
+        "000000012670",
+        "000000013923",
+        "000000014439",
+        "000000015254",
+        "000000016228",
+        "000000016249",
+        "000000017714",
+        "000000017899",
+        "000000018491",
+        "000000018575",
+        "000000018837",
+        "000000019432",
+        "000000021167",
+        "000000021839",
+        "000000022892",
+        "000000022935",
+        "000000023781",
+        "000000024021",
+        "000000024567",
+        "000000025139",
+        "000000025393"
+      ],
+      "verdicts_recorded_in": "review_log.csv",
+      "package_results": [
+        {
+          "package": "f1_review_package_20261120",
+          "candidate_type": "bbox_drift",
+          "rows": 2,
+          "confirmed": 2,
+          "rejected": 0,
+          "coverage_threshold": 0.9
+        },
+        {
+          "package": "f1_review_package_round2",
+          "candidate_type": "bbox_drift",
+          "rows": 2,
+          "confirmed": 1,
+          "rejected": 1,
+          "coverage_threshold": 0.98
+        },
+        {
+          "package": "f1_review_package_round3",
+          "candidate_type": "instance_merge",
+          "rows": 13,
+          "confirmed": 0,
+          "rejected": 13,
+          "mask_coverage_threshold": 0.2
+        },
+        {
+          "package": "f1_review_package_round4",
+          "candidate_type": "instance_merge",
+          "rows": 10,
+          "confirmed": 1,
+          "rejected": 9,
+          "mask_coverage_threshold": 0.1
+        },
+        {
+          "package": "f1_review_package_round5",
+          "candidate_type": "instance_merge",
+          "rows": 7,
+          "confirmed": 1,
+          "rejected": 6,
+          "mask_coverage_threshold": 0.05
+        },
+        {
+          "package": "f1_review_package_round6",
+          "candidate_type": "instance_merge",
+          "rows": 1,
+          "confirmed": 0,
+          "rejected": 1,
+          "mask_coverage_threshold": 0.01
+        }
+      ]
+    }
   },
   "candidates": [
     {
@@ -5061,6 +5151,2676 @@
                 "segment_coverage": 1.0
               },
               "detection_iou": 0.0018
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000017899",
+      "candidate_type": "bbox_drift",
+      "suggested_error_types": [
+        "bbox_drift"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "detection": {
+            "class_id": 41,
+            "class_name": "cup",
+            "bbox_xyxy": [
+              412.47,
+              467.56,
+              479.04,
+              585.17
+            ]
+          },
+          "panoptic": {
+            "segment_id": 12301495,
+            "category_id": 47,
+            "category_name": "cup",
+            "mask_bbox_xyxy": [
+              413,
+              490,
+              480,
+              607
+            ]
+          },
+          "bbox_iou": 0.6698,
+          "mask_coverage": 0.8733,
+          "overlap_pixels": 5464,
+          "segment_pixels": 6257
+        }
+      ]
+    },
+    {
+      "image": "000000022892",
+      "candidate_type": "bbox_drift",
+      "suggested_error_types": [
+        "bbox_drift"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "detection": {
+            "class_id": 16,
+            "class_name": "dog",
+            "bbox_xyxy": [
+              76.7,
+              54.29,
+              281.46,
+              231.9
+            ]
+          },
+          "panoptic": {
+            "segment_id": 5134175,
+            "category_id": 18,
+            "category_name": "dog",
+            "mask_bbox_xyxy": [
+              36,
+              76,
+              289,
+              295
+            ]
+          },
+          "bbox_iou": 0.5333,
+          "mask_coverage": 0.8225,
+          "overlap_pixels": 14948,
+          "segment_pixels": 18174
+        }
+      ]
+    },
+    {
+      "image": "000000011699",
+      "candidate_type": "bbox_drift",
+      "suggested_error_types": [
+        "bbox_drift"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "detection": {
+            "class_id": 0,
+            "class_name": "person",
+            "bbox_xyxy": [
+              187.39,
+              99.46,
+              432.43,
+              632.79
+            ]
+          },
+          "panoptic": {
+            "segment_id": 6316384,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              6,
+              99,
+              432,
+              633
+            ]
+          },
+          "bbox_iou": 0.5729,
+          "mask_coverage": 0.9686,
+          "overlap_pixels": 48761,
+          "segment_pixels": 50340
+        }
+      ]
+    },
+    {
+      "image": "000000025393",
+      "candidate_type": "bbox_drift",
+      "suggested_error_types": [
+        "bbox_drift"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "detection": {
+            "class_id": 0,
+            "class_name": "person",
+            "bbox_xyxy": [
+              182.22,
+              77.94,
+              319.84,
+              480.0
+            ]
+          },
+          "panoptic": {
+            "segment_id": 6579824,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              149,
+              74,
+              286,
+              474
+            ]
+          },
+          "bbox_iou": 0.5954,
+          "mask_coverage": 0.9376,
+          "overlap_pixels": 26752,
+          "segment_pixels": 28531
+        }
+      ]
+    },
+    {
+      "image": "000000002157",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 2,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 5919607,
+            "category_id": 46,
+            "category_name": "wine glass",
+            "mask_bbox_xyxy": [
+              92,
+              88,
+              157,
+              171
+            ]
+          },
+          "segment_pixels": 3630,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 4,
+              "class_id": 40,
+              "class_name": "wine glass",
+              "bbox_xyxy": [
+                138.65,
+                27.38,
+                200.94,
+                169.04
+              ],
+              "mask_pixels_in_box": 866,
+              "segment_coverage": 0.2386,
+              "box_mask_fraction": 0.0961,
+              "partner": {
+                "box_index": 5,
+                "class_id": 40,
+                "class_name": "wine glass",
+                "bbox_xyxy": [
+                  46.92,
+                  17.23,
+                  113.83,
+                  161.22
+                ],
+                "mask_pixels_in_box": 1079,
+                "segment_coverage": 0.2972,
+                "box_mask_fraction": 0.1094
+              },
+              "detection_iou": 0.0
+            },
+            {
+              "box_index": 4,
+              "class_id": 40,
+              "class_name": "wine glass",
+              "bbox_xyxy": [
+                138.65,
+                27.38,
+                200.94,
+                169.04
+              ],
+              "mask_pixels_in_box": 866,
+              "segment_coverage": 0.2386,
+              "box_mask_fraction": 0.0961,
+              "partner": {
+                "box_index": 10,
+                "class_id": 40,
+                "class_name": "wine glass",
+                "bbox_xyxy": [
+                  50.96,
+                  60.53,
+                  110.72,
+                  154.61
+                ],
+                "mask_pixels_in_box": 882,
+                "segment_coverage": 0.243,
+                "box_mask_fraction": 0.1522
+              },
+              "detection_iou": 0.0
+            }
+          ]
+        },
+        {
+          "panoptic": {
+            "segment_id": 5261667,
+            "category_id": 46,
+            "category_name": "wine glass",
+            "mask_bbox_xyxy": [
+              140,
+              28,
+              201,
+              169
+            ]
+          },
+          "segment_pixels": 3694,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 7,
+              "class_id": 40,
+              "class_name": "wine glass",
+              "bbox_xyxy": [
+                163.37,
+                68.29,
+                233.8,
+                176.16
+              ],
+              "mask_pixels_in_box": 893,
+              "segment_coverage": 0.2417,
+              "box_mask_fraction": 0.1154,
+              "partner": {
+                "box_index": 8,
+                "class_id": 40,
+                "class_name": "wine glass",
+                "bbox_xyxy": [
+                  113.86,
+                  15.04,
+                  166.64,
+                  92.48
+                ],
+                "mask_pixels_in_box": 1575,
+                "segment_coverage": 0.4264,
+                "box_mask_fraction": 0.3739
+              },
+              "detection_iou": 0.0068
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000002299",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 11579568,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              100,
+              80,
+              147,
+              154
+            ]
+          },
+          "segment_pixels": 1768,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 13,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                60.0,
+                32.96,
+                113.21,
+                139.84
+              ],
+              "mask_pixels_in_box": 375,
+              "segment_coverage": 0.2121,
+              "box_mask_fraction": 0.0643,
+              "partner": {
+                "box_index": 14,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  99.93,
+                  80.0,
+                  146.6,
+                  154.28
+                ],
+                "mask_pixels_in_box": 1768,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.4911
+              },
+              "detection_iou": 0.0951
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000003255",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 1447190,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              243,
+              315,
+              251,
+              356
+            ]
+          },
+          "segment_pixels": 192,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 0,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                246.04,
+                319.95,
+                257.47,
+                357.35
+              ],
+              "mask_pixels_in_box": 89,
+              "segment_coverage": 0.4635,
+              "box_mask_fraction": 0.1902,
+              "partner": {
+                "box_index": 7,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  235.17,
+                  317.55,
+                  244.68,
+                  355.8
+                ],
+                "mask_pixels_in_box": 53,
+                "segment_coverage": 0.276,
+                "box_mask_fraction": 0.1359
+              },
+              "detection_iou": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000007818",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 4999232,
+            "category_id": 46,
+            "category_name": "wine glass",
+            "mask_bbox_xyxy": [
+              400,
+              187,
+              443,
+              285
+            ]
+          },
+          "segment_pixels": 2302,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 1,
+              "class_id": 40,
+              "class_name": "wine glass",
+              "bbox_xyxy": [
+                332.5,
+                158.89,
+                413.42,
+                352.67
+              ],
+              "mask_pixels_in_box": 522,
+              "segment_coverage": 0.2268,
+              "box_mask_fraction": 0.0326,
+              "partner": {
+                "box_index": 2,
+                "class_id": 40,
+                "class_name": "wine glass",
+                "bbox_xyxy": [
+                  399.86,
+                  187.2,
+                  443.02,
+                  284.73
+                ],
+                "mask_pixels_in_box": 2302,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.522
+              },
+              "detection_iou": 0.0712
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000012120",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 2,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 3293789,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              556,
+              91,
+              572,
+              116
+            ]
+          },
+          "segment_pixels": 261,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 7,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                568.44,
+                84.77,
+                586.59,
+                120.24
+              ],
+              "mask_pixels_in_box": 58,
+              "segment_coverage": 0.2222,
+              "box_mask_fraction": 0.0825,
+              "partner": {
+                "box_index": 8,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  555.55,
+                  90.73,
+                  572.12,
+                  116.33
+                ],
+                "mask_pixels_in_box": 261,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.537
+              },
+              "detection_iou": 0.0967
+            }
+          ]
+        },
+        {
+          "panoptic": {
+            "segment_id": 8555679,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              497,
+              76,
+              510,
+              102
+            ]
+          },
+          "segment_pixels": 234,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 12,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                482.8,
+                92.69,
+                504.55,
+                125.43
+              ],
+              "mask_pixels_in_box": 59,
+              "segment_coverage": 0.2521,
+              "box_mask_fraction": 0.0754,
+              "partner": {
+                "box_index": 20,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  496.57,
+                  75.94,
+                  510.18,
+                  102.37
+                ],
+                "mask_pixels_in_box": 234,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.5571
+              },
+              "detection_iou": 0.0777
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000012670",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 4018843,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              315,
+              173,
+              393,
+              259
+            ]
+          },
+          "segment_pixels": 2893,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 3,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                263.53,
+                46.17,
+                340.48,
+                242.37
+              ],
+              "mask_pixels_in_box": 835,
+              "segment_coverage": 0.2886,
+              "box_mask_fraction": 0.0543,
+              "partner": {
+                "box_index": 13,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  315.29,
+                  172.64,
+                  393.18,
+                  259.65
+                ],
+                "mask_pixels_in_box": 2893,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.4161
+              },
+              "detection_iou": 0.0873
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000013923",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 4080824,
+            "category_id": 62,
+            "category_name": "chair",
+            "mask_bbox_xyxy": [
+              244,
+              287,
+              337,
+              410
+            ]
+          },
+          "segment_pixels": 7015,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 3,
+              "class_id": 56,
+              "class_name": "chair",
+              "bbox_xyxy": [
+                213.5,
+                232.37,
+                335.89,
+                370.4
+              ],
+              "mask_pixels_in_box": 5335,
+              "segment_coverage": 0.7605,
+              "box_mask_fraction": 0.312,
+              "partner": {
+                "box_index": 18,
+                "class_id": 56,
+                "class_name": "chair",
+                "bbox_xyxy": [
+                  240.48,
+                  369.41,
+                  339.3,
+                  427.0
+                ],
+                "mask_pixels_in_box": 1771,
+                "segment_coverage": 0.2525,
+                "box_mask_fraction": 0.3053
+              },
+              "detection_iou": 0.0042
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000014439",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 3295590,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              378,
+              40,
+              396,
+              83
+            ]
+          },
+          "segment_pixels": 368,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 7,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                363.69,
+                57.51,
+                383.02,
+                113.77
+              ],
+              "mask_pixels_in_box": 74,
+              "segment_coverage": 0.2011,
+              "box_mask_fraction": 0.0618,
+              "partner": {
+                "box_index": 9,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  378.2,
+                  40.08,
+                  396.08,
+                  82.95
+                ],
+                "mask_pixels_in_box": 368,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.4504
+              },
+              "detection_iou": 0.0708
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000016228",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 5914694,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              67,
+              206,
+              81,
+              260
+            ]
+          },
+          "segment_pixels": 453,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 4,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                76.84,
+                196.72,
+                109.04,
+                263.06
+              ],
+              "mask_pixels_in_box": 91,
+              "segment_coverage": 0.2009,
+              "box_mask_fraction": 0.0394,
+              "partner": {
+                "box_index": 12,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  66.67,
+                  205.61,
+                  80.58,
+                  260.41
+                ],
+                "mask_pixels_in_box": 453,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.5393
+              },
+              "detection_iou": 0.0761
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000016249",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 4410456,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              277,
+              38,
+              347,
+              164
+            ]
+          },
+          "segment_pixels": 5193,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 1,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                275.23,
+                38.18,
+                346.75,
+                164.43
+              ],
+              "mask_pixels_in_box": 5193,
+              "segment_coverage": 1.0,
+              "box_mask_fraction": 0.5679,
+              "partner": {
+                "box_index": 2,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  314.46,
+                  98.67,
+                  454.04,
+                  281.57
+                ],
+                "mask_pixels_in_box": 1203,
+                "segment_coverage": 0.2317,
+                "box_mask_fraction": 0.0464
+              },
+              "detection_iou": 0.0655
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000018837",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 5791579,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              294,
+              22,
+              342,
+              123
+            ]
+          },
+          "segment_pixels": 2989,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 1,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                327.57,
+                14.59,
+                467.03,
+                158.38
+              ],
+              "mask_pixels_in_box": 783,
+              "segment_coverage": 0.262,
+              "box_mask_fraction": 0.0383,
+              "partner": {
+                "box_index": 2,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  294.3,
+                  21.62,
+                  342.47,
+                  123.13
+                ],
+                "mask_pixels_in_box": 2989,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.5922
+              },
+              "detection_iou": 0.0646
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000024021",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 6118749,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              328,
+              133,
+              389,
+              204
+            ]
+          },
+          "segment_pixels": 1811,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 8,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                366.1,
+                131.16,
+                401.59,
+                200.38
+              ],
+              "mask_pixels_in_box": 605,
+              "segment_coverage": 0.3341,
+              "box_mask_fraction": 0.2401,
+              "partner": {
+                "box_index": 24,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  339.16,
+                  167.08,
+                  375.08,
+                  239.26
+                ],
+                "mask_pixels_in_box": 468,
+                "segment_coverage": 0.2584,
+                "box_mask_fraction": 0.1733
+              },
+              "detection_iou": 0.0629
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000024567",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 2,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 4218309,
+            "category_id": 58,
+            "category_name": "hot dog",
+            "mask_bbox_xyxy": [
+              187,
+              443,
+              363,
+              548
+            ]
+          },
+          "segment_pixels": 10638,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 3,
+              "class_id": 52,
+              "class_name": "hot dog",
+              "bbox_xyxy": [
+                120.92,
+                385.76,
+                265.65,
+                472.53
+              ],
+              "mask_pixels_in_box": 2151,
+              "segment_coverage": 0.2022,
+              "box_mask_fraction": 0.1674,
+              "partner": {
+                "box_index": 4,
+                "class_id": 52,
+                "class_name": "hot dog",
+                "bbox_xyxy": [
+                  186.73,
+                  436.71,
+                  362.92,
+                  548.14
+                ],
+                "mask_pixels_in_box": 10638,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.5319
+              },
+              "detection_iou": 0.0963
+            }
+          ]
+        },
+        {
+          "panoptic": {
+            "segment_id": 4089287,
+            "category_id": 58,
+            "category_name": "hot dog",
+            "mask_bbox_xyxy": [
+              138,
+              528,
+              307,
+              583
+            ]
+          },
+          "segment_pixels": 7558,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 4,
+              "class_id": 52,
+              "class_name": "hot dog",
+              "bbox_xyxy": [
+                186.73,
+                436.71,
+                362.92,
+                548.14
+              ],
+              "mask_pixels_in_box": 2153,
+              "segment_coverage": 0.2849,
+              "box_mask_fraction": 0.1076,
+              "partner": {
+                "box_index": 5,
+                "class_id": 52,
+                "class_name": "hot dog",
+                "bbox_xyxy": [
+                  51.2,
+                  468.33,
+                  201.79,
+                  575.25
+                ],
+                "mask_pixels_in_box": 2498,
+                "segment_coverage": 0.3305,
+                "box_mask_fraction": 0.1532
+              },
+              "detection_iou": 0.0348
+            },
+            {
+              "box_index": 4,
+              "class_id": 52,
+              "class_name": "hot dog",
+              "bbox_xyxy": [
+                186.73,
+                436.71,
+                362.92,
+                548.14
+              ],
+              "mask_pixels_in_box": 2153,
+              "segment_coverage": 0.2849,
+              "box_mask_fraction": 0.1076,
+              "partner": {
+                "box_index": 6,
+                "class_id": 52,
+                "class_name": "hot dog",
+                "bbox_xyxy": [
+                  137.89,
+                  527.73,
+                  307.26,
+                  583.19
+                ],
+                "mask_pixels_in_box": 7558,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.7754
+              },
+              "detection_iou": 0.0926
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000003845",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 406075,
+            "category_id": 56,
+            "category_name": "broccoli",
+            "mask_bbox_xyxy": [
+              121,
+              206,
+              178,
+              270
+            ]
+          },
+          "segment_pixels": 2244,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 3,
+              "class_id": 50,
+              "class_name": "broccoli",
+              "bbox_xyxy": [
+                121.15,
+                206.42,
+                178.2,
+                270.45
+              ],
+              "mask_pixels_in_box": 2244,
+              "segment_coverage": 1.0,
+              "box_mask_fraction": 0.5952,
+              "partner": {
+                "box_index": 4,
+                "class_id": 50,
+                "class_name": "broccoli",
+                "bbox_xyxy": [
+                  171.25,
+                  186.27,
+                  266.98,
+                  257.4
+                ],
+                "mask_pixels_in_box": 241,
+                "segment_coverage": 0.1074,
+                "box_mask_fraction": 0.0349
+              },
+              "detection_iou": 0.0351
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000006954",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 6845833,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              145,
+              137,
+              268,
+              330
+            ]
+          },
+          "segment_pixels": 14090,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 0,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                1.08,
+                107.87,
+                163.96,
+                454.11
+              ],
+              "mask_pixels_in_box": 2004,
+              "segment_coverage": 0.1422,
+              "box_mask_fraction": 0.0353,
+              "partner": {
+                "box_index": 1,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  197.39,
+                  124.04,
+                  368.9,
+                  372.13
+                ],
+                "mask_pixels_in_box": 7888,
+                "segment_coverage": 0.5598,
+                "box_mask_fraction": 0.1842
+              },
+              "detection_iou": 0.0
+            },
+            {
+              "box_index": 0,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                1.08,
+                107.87,
+                163.96,
+                454.11
+              ],
+              "mask_pixels_in_box": 2004,
+              "segment_coverage": 0.1422,
+              "box_mask_fraction": 0.0353,
+              "partner": {
+                "box_index": 3,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  145.29,
+                  136.68,
+                  267.98,
+                  330.4
+                ],
+                "mask_pixels_in_box": 14090,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.5875
+              },
+              "detection_iou": 0.0472
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000008021",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 4606360,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              244,
+              101,
+              441,
+              368
+            ]
+          },
+          "segment_pixels": 32673,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 1,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                3.24,
+                255.14,
+                309.19,
+                478.92
+              ],
+              "mask_pixels_in_box": 6125,
+              "segment_coverage": 0.1875,
+              "box_mask_fraction": 0.0891,
+              "partner": {
+                "box_index": 3,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  244.3,
+                  101.17,
+                  441.26,
+                  368.07
+                ],
+                "mask_pixels_in_box": 32673,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.6157
+              },
+              "detection_iou": 0.0644
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000011699",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 3681423,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              61,
+              83,
+              223,
+              419
+            ]
+          },
+          "segment_pixels": 38599,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 0,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                187.39,
+                99.46,
+                432.43,
+                632.79
+              ],
+              "mask_pixels_in_box": 7447,
+              "segment_coverage": 0.1929,
+              "box_mask_fraction": 0.0567,
+              "partner": {
+                "box_index": 1,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  60.54,
+                  82.88,
+                  223.42,
+                  418.74
+                ],
+                "mask_pixels_in_box": 38599,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.6984
+              },
+              "detection_iou": 0.0662
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000015254",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 1199075,
+            "category_id": 57,
+            "category_name": "carrot",
+            "mask_bbox_xyxy": [
+              376,
+              9,
+              524,
+              161
+            ]
+          },
+          "segment_pixels": 8538,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 4,
+              "class_id": 51,
+              "class_name": "carrot",
+              "bbox_xyxy": [
+                397.86,
+                21.1,
+                441.07,
+                165.78
+              ],
+              "mask_pixels_in_box": 1597,
+              "segment_coverage": 0.187,
+              "box_mask_fraction": 0.2448,
+              "partner": {
+                "box_index": 5,
+                "class_id": 51,
+                "class_name": "carrot",
+                "bbox_xyxy": [
+                  473.11,
+                  27.66,
+                  521.22,
+                  159.97
+                ],
+                "mask_pixels_in_box": 2180,
+                "segment_coverage": 0.2553,
+                "box_mask_fraction": 0.3345
+              },
+              "detection_iou": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000017714",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 4,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 2702921,
+            "category_id": 52,
+            "category_name": "banana",
+            "mask_bbox_xyxy": [
+              444,
+              299,
+              486,
+              333
+            ]
+          },
+          "segment_pixels": 896,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 8,
+              "class_id": 46,
+              "class_name": "banana",
+              "bbox_xyxy": [
+                424.96,
+                290.85,
+                453.03,
+                319.42
+              ],
+              "mask_pixels_in_box": 122,
+              "segment_coverage": 0.1362,
+              "box_mask_fraction": 0.1356,
+              "partner": {
+                "box_index": 9,
+                "class_id": 46,
+                "class_name": "banana",
+                "bbox_xyxy": [
+                  443.8,
+                  298.9,
+                  486.89,
+                  332.84
+                ],
+                "mask_pixels_in_box": 896,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.5818
+              },
+              "detection_iou": 0.0913
+            },
+            {
+              "box_index": 8,
+              "class_id": 46,
+              "class_name": "banana",
+              "bbox_xyxy": [
+                424.96,
+                290.85,
+                453.03,
+                319.42
+              ],
+              "mask_pixels_in_box": 122,
+              "segment_coverage": 0.1362,
+              "box_mask_fraction": 0.1356,
+              "partner": {
+                "box_index": 14,
+                "class_id": 46,
+                "class_name": "banana",
+                "bbox_xyxy": [
+                  473.52,
+                  301.41,
+                  488.49,
+                  317.34
+                ],
+                "mask_pixels_in_box": 106,
+                "segment_coverage": 0.1183,
+                "box_mask_fraction": 0.3897
+              },
+              "detection_iou": 0.0
+            }
+          ]
+        },
+        {
+          "panoptic": {
+            "segment_id": 2833735,
+            "category_id": 52,
+            "category_name": "banana",
+            "mask_bbox_xyxy": [
+              506,
+              323,
+              535,
+              363
+            ]
+          },
+          "segment_pixels": 778,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 10,
+              "class_id": 46,
+              "class_name": "banana",
+              "bbox_xyxy": [
+                483.2,
+                302.36,
+                512.02,
+                343.34
+              ],
+              "mask_pixels_in_box": 80,
+              "segment_coverage": 0.1028,
+              "box_mask_fraction": 0.0635,
+              "partner": {
+                "box_index": 11,
+                "class_id": 46,
+                "class_name": "banana",
+                "bbox_xyxy": [
+                  506.09,
+                  323.16,
+                  535.43,
+                  363.03
+                ],
+                "mask_pixels_in_box": 778,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.6325
+              },
+              "detection_iou": 0.0536
+            }
+          ]
+        },
+        {
+          "panoptic": {
+            "segment_id": 3691872,
+            "category_id": 52,
+            "category_name": "banana",
+            "mask_bbox_xyxy": [
+              450,
+              274,
+              479,
+              305
+            ]
+          },
+          "segment_pixels": 578,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 7,
+              "class_id": 46,
+              "class_name": "banana",
+              "bbox_xyxy": [
+                449.51,
+                274.17,
+                478.94,
+                305.77
+              ],
+              "mask_pixels_in_box": 578,
+              "segment_coverage": 1.0,
+              "box_mask_fraction": 0.6021,
+              "partner": {
+                "box_index": 9,
+                "class_id": 46,
+                "class_name": "banana",
+                "bbox_xyxy": [
+                  443.8,
+                  298.9,
+                  486.89,
+                  332.84
+                ],
+                "mask_pixels_in_box": 68,
+                "segment_coverage": 0.1176,
+                "box_mask_fraction": 0.0442
+              },
+              "detection_iou": 0.0923
+            }
+          ]
+        },
+        {
+          "panoptic": {
+            "segment_id": 2309192,
+            "category_id": 52,
+            "category_name": "banana",
+            "mask_bbox_xyxy": [
+              425,
+              291,
+              453,
+              319
+            ]
+          },
+          "segment_pixels": 536,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 8,
+              "class_id": 46,
+              "class_name": "banana",
+              "bbox_xyxy": [
+                424.96,
+                290.85,
+                453.03,
+                319.42
+              ],
+              "mask_pixels_in_box": 536,
+              "segment_coverage": 1.0,
+              "box_mask_fraction": 0.5956,
+              "partner": {
+                "box_index": 9,
+                "class_id": 46,
+                "class_name": "banana",
+                "bbox_xyxy": [
+                  443.8,
+                  298.9,
+                  486.89,
+                  332.84
+                ],
+                "mask_pixels_in_box": 96,
+                "segment_coverage": 0.1791,
+                "box_mask_fraction": 0.0623
+              },
+              "detection_iou": 0.0913
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000018491",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 3,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 4211529,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              59,
+              62,
+              94,
+              119
+            ]
+          },
+          "segment_pixels": 1136,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 8,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                69.7,
+                95.37,
+                122.8,
+                217.47
+              ],
+              "mask_pixels_in_box": 205,
+              "segment_coverage": 0.1805,
+              "box_mask_fraction": 0.0309,
+              "partner": {
+                "box_index": 9,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  58.77,
+                  61.57,
+                  95.05,
+                  119.75
+                ],
+                "mask_pixels_in_box": 1136,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.5067
+              },
+              "detection_iou": 0.0775
+            }
+          ]
+        },
+        {
+          "panoptic": {
+            "segment_id": 4278353,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              275,
+              69,
+              332,
+              216
+            ]
+          },
+          "segment_pixels": 4339,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 3,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                243.01,
+                184.65,
+                368.81,
+                305.25
+              ],
+              "mask_pixels_in_box": 748,
+              "segment_coverage": 0.1724,
+              "box_mask_fraction": 0.0487,
+              "partner": {
+                "box_index": 6,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  274.91,
+                  68.91,
+                  331.5,
+                  216.41
+                ],
+                "mask_pixels_in_box": 4339,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.5021
+              },
+              "detection_iou": 0.0827
+            }
+          ]
+        },
+        {
+          "panoptic": {
+            "segment_id": 5525067,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              70,
+              96,
+              123,
+              217
+            ]
+          },
+          "segment_pixels": 2696,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 8,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                69.7,
+                95.37,
+                122.8,
+                217.47
+              ],
+              "mask_pixels_in_box": 2696,
+              "segment_coverage": 1.0,
+              "box_mask_fraction": 0.4059,
+              "partner": {
+                "box_index": 9,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  58.77,
+                  61.57,
+                  95.05,
+                  119.75
+                ],
+                "mask_pixels_in_box": 312,
+                "segment_coverage": 0.1157,
+                "box_mask_fraction": 0.1392
+              },
+              "detection_iou": 0.0775
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000018575",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 10655373,
+            "category_id": 44,
+            "category_name": "bottle",
+            "mask_bbox_xyxy": [
+              460,
+              72,
+              537,
+              165
+            ]
+          },
+          "segment_pixels": 5021,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 3,
+              "class_id": 39,
+              "class_name": "bottle",
+              "bbox_xyxy": [
+                459.66,
+                71.99,
+                537.51,
+                165.17
+              ],
+              "mask_pixels_in_box": 5021,
+              "segment_coverage": 1.0,
+              "box_mask_fraction": 0.669,
+              "partner": {
+                "box_index": 4,
+                "class_id": 39,
+                "class_name": "bottle",
+                "bbox_xyxy": [
+                  468.78,
+                  2.49,
+                  553.56,
+                  91.01
+                ],
+                "mask_pixels_in_box": 793,
+                "segment_coverage": 0.1579,
+                "box_mask_fraction": 0.1025
+              },
+              "detection_iou": 0.0972
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000019432",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 3,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 8491143,
+            "category_id": 62,
+            "category_name": "chair",
+            "mask_bbox_xyxy": [
+              344,
+              59,
+              416,
+              167
+            ]
+          },
+          "segment_pixels": 5839,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 0,
+              "class_id": 56,
+              "class_name": "chair",
+              "bbox_xyxy": [
+                344.09,
+                58.26,
+                416.27,
+                166.95
+              ],
+              "mask_pixels_in_box": 5839,
+              "segment_coverage": 1.0,
+              "box_mask_fraction": 0.7338,
+              "partner": {
+                "box_index": 3,
+                "class_id": 56,
+                "class_name": "chair",
+                "bbox_xyxy": [
+                  282.16,
+                  15.68,
+                  354.59,
+                  165.95
+                ],
+                "mask_pixels_in_box": 662,
+                "segment_coverage": 0.1134,
+                "box_mask_fraction": 0.0601
+              },
+              "detection_iou": 0.0643
+            }
+          ]
+        },
+        {
+          "panoptic": {
+            "segment_id": 9408141,
+            "category_id": 62,
+            "category_name": "chair",
+            "mask_bbox_xyxy": [
+              538,
+              18,
+              596,
+              66
+            ]
+          },
+          "segment_pixels": 2538,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 2,
+              "class_id": 56,
+              "class_name": "chair",
+              "bbox_xyxy": [
+                522.07,
+                57.92,
+                596.49,
+                173.33
+              ],
+              "mask_pixels_in_box": 436,
+              "segment_coverage": 0.1718,
+              "box_mask_fraction": 0.0497,
+              "partner": {
+                "box_index": 12,
+                "class_id": 56,
+                "class_name": "chair",
+                "bbox_xyxy": [
+                  538.25,
+                  18.34,
+                  596.49,
+                  65.8
+                ],
+                "mask_pixels_in_box": 2538,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.8962
+              },
+              "detection_iou": 0.0421
+            }
+          ]
+        },
+        {
+          "panoptic": {
+            "segment_id": 7832185,
+            "category_id": 62,
+            "category_name": "chair",
+            "mask_bbox_xyxy": [
+              225,
+              58,
+              293,
+              167
+            ]
+          },
+          "segment_pixels": 5481,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 3,
+              "class_id": 56,
+              "class_name": "chair",
+              "bbox_xyxy": [
+                282.16,
+                15.68,
+                354.59,
+                165.95
+              ],
+              "mask_pixels_in_box": 824,
+              "segment_coverage": 0.1503,
+              "box_mask_fraction": 0.0748,
+              "partner": {
+                "box_index": 8,
+                "class_id": 56,
+                "class_name": "chair",
+                "bbox_xyxy": [
+                  224.96,
+                  58.1,
+                  292.84,
+                  167.03
+                ],
+                "mask_pixels_in_box": 5481,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.7221
+              },
+              "detection_iou": 0.0673
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000023781",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 2,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 10466288,
+            "category_id": 57,
+            "category_name": "carrot",
+            "mask_bbox_xyxy": [
+              378,
+              313,
+              493,
+              374
+            ]
+          },
+          "segment_pixels": 4124,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 1,
+              "class_id": 51,
+              "class_name": "carrot",
+              "bbox_xyxy": [
+                377.52,
+                313.0,
+                492.8,
+                373.5
+              ],
+              "mask_pixels_in_box": 4124,
+              "segment_coverage": 1.0,
+              "box_mask_fraction": 0.5734,
+              "partner": {
+                "box_index": 4,
+                "class_id": 51,
+                "class_name": "carrot",
+                "bbox_xyxy": [
+                  379.78,
+                  362.7,
+                  482.26,
+                  421.98
+                ],
+                "mask_pixels_in_box": 707,
+                "segment_coverage": 0.1714,
+                "box_mask_fraction": 0.1133
+              },
+              "detection_iou": 0.0927
+            },
+            {
+              "box_index": 3,
+              "class_id": 51,
+              "class_name": "carrot",
+              "bbox_xyxy": [
+                337.83,
+                285.42,
+                460.4,
+                337.26
+              ],
+              "mask_pixels_in_box": 590,
+              "segment_coverage": 0.1431,
+              "box_mask_fraction": 0.0898,
+              "partner": {
+                "box_index": 4,
+                "class_id": 51,
+                "class_name": "carrot",
+                "bbox_xyxy": [
+                  379.78,
+                  362.7,
+                  482.26,
+                  421.98
+                ],
+                "mask_pixels_in_box": 707,
+                "segment_coverage": 0.1714,
+                "box_mask_fraction": 0.1133
+              },
+              "detection_iou": 0.0
+            }
+          ]
+        },
+        {
+          "panoptic": {
+            "segment_id": 6781662,
+            "category_id": 57,
+            "category_name": "carrot",
+            "mask_bbox_xyxy": [
+              338,
+              285,
+              460,
+              337
+            ]
+          },
+          "segment_pixels": 4332,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 1,
+              "class_id": 51,
+              "class_name": "carrot",
+              "bbox_xyxy": [
+                377.52,
+                313.0,
+                492.8,
+                373.5
+              ],
+              "mask_pixels_in_box": 1488,
+              "segment_coverage": 0.3435,
+              "box_mask_fraction": 0.2069,
+              "partner": {
+                "box_index": 5,
+                "class_id": 51,
+                "class_name": "carrot",
+                "bbox_xyxy": [
+                  425.57,
+                  269.46,
+                  475.07,
+                  305.12
+                ],
+                "mask_pixels_in_box": 567,
+                "segment_coverage": 0.1309,
+                "box_mask_fraction": 0.3005
+              },
+              "detection_iou": 0.0
+            },
+            {
+              "box_index": 3,
+              "class_id": 51,
+              "class_name": "carrot",
+              "bbox_xyxy": [
+                337.83,
+                285.42,
+                460.4,
+                337.26
+              ],
+              "mask_pixels_in_box": 4332,
+              "segment_coverage": 1.0,
+              "box_mask_fraction": 0.6592,
+              "partner": {
+                "box_index": 5,
+                "class_id": 51,
+                "class_name": "carrot",
+                "bbox_xyxy": [
+                  425.57,
+                  269.46,
+                  475.07,
+                  305.12
+                ],
+                "mask_pixels_in_box": 567,
+                "segment_coverage": 0.1309,
+                "box_mask_fraction": 0.3005
+              },
+              "detection_iou": 0.0923
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000000632",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 1251357,
+            "category_id": 84,
+            "category_name": "book",
+            "mask_bbox_xyxy": [
+              461,
+              192,
+              490,
+              228
+            ]
+          },
+          "segment_pixels": 920,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 2,
+              "class_id": 73,
+              "class_name": "book",
+              "bbox_xyxy": [
+                455.98,
+                192.5,
+                464.55,
+                228.09
+              ],
+              "mask_pixels_in_box": 74,
+              "segment_coverage": 0.0804,
+              "box_mask_fraction": 0.2,
+              "partner": {
+                "box_index": 6,
+                "class_id": 73,
+                "class_name": "book",
+                "bbox_xyxy": [
+                  487.51,
+                  199.33,
+                  494.99,
+                  227.38
+                ],
+                "mask_pixels_in_box": 61,
+                "segment_coverage": 0.0663,
+                "box_mask_fraction": 0.2629
+              },
+              "detection_iou": 0.0
+            },
+            {
+              "box_index": 6,
+              "class_id": 73,
+              "class_name": "book",
+              "bbox_xyxy": [
+                487.51,
+                199.33,
+                494.99,
+                227.38
+              ],
+              "mask_pixels_in_box": 61,
+              "segment_coverage": 0.0663,
+              "box_mask_fraction": 0.2629,
+              "partner": {
+                "box_index": 9,
+                "class_id": 73,
+                "class_name": "book",
+                "bbox_xyxy": [
+                  460.91,
+                  191.67,
+                  490.24,
+                  227.71
+                ],
+                "mask_pixels_in_box": 920,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.8021
+              },
+              "detection_iou": 0.0643
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000005600",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 2,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 1594007,
+            "category_id": 51,
+            "category_name": "bowl",
+            "mask_bbox_xyxy": [
+              212,
+              138,
+              538,
+              361
+            ]
+          },
+          "segment_pixels": 59957,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 1,
+              "class_id": 45,
+              "class_name": "bowl",
+              "bbox_xyxy": [
+                212.07,
+                138.09,
+                538.26,
+                361.0
+              ],
+              "mask_pixels_in_box": 59957,
+              "segment_coverage": 1.0,
+              "box_mask_fraction": 0.8222,
+              "partner": {
+                "box_index": 2,
+                "class_id": 45,
+                "class_name": "bowl",
+                "bbox_xyxy": [
+                  123.31,
+                  1.68,
+                  374.79,
+                  181.77
+                ],
+                "mask_pixels_in_box": 4569,
+                "segment_coverage": 0.0762,
+                "box_mask_fraction": 0.1002
+              },
+              "detection_iou": 0.0641
+            }
+          ]
+        },
+        {
+          "panoptic": {
+            "segment_id": 598861,
+            "category_id": 51,
+            "category_name": "bowl",
+            "mask_bbox_xyxy": [
+              123,
+              2,
+              375,
+              182
+            ]
+          },
+          "segment_pixels": 33855,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 1,
+              "class_id": 45,
+              "class_name": "bowl",
+              "bbox_xyxy": [
+                212.07,
+                138.09,
+                538.26,
+                361.0
+              ],
+              "mask_pixels_in_box": 2475,
+              "segment_coverage": 0.0731,
+              "box_mask_fraction": 0.0339,
+              "partner": {
+                "box_index": 2,
+                "class_id": 45,
+                "class_name": "bowl",
+                "bbox_xyxy": [
+                  123.31,
+                  1.68,
+                  374.79,
+                  181.77
+                ],
+                "mask_pixels_in_box": 33855,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.7422
+              },
+              "detection_iou": 0.0641
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000006471",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 1578267,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              170,
+              74,
+              222,
+              131
+            ]
+          },
+          "segment_pixels": 1613,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 3,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                169.32,
+                74.42,
+                221.95,
+                131.31
+              ],
+              "mask_pixels_in_box": 1613,
+              "segment_coverage": 1.0,
+              "box_mask_fraction": 0.5247,
+              "partner": {
+                "box_index": 5,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  215.51,
+                  76.33,
+                  262.66,
+                  130.21
+                ],
+                "mask_pixels_in_box": 94,
+                "segment_coverage": 0.0583,
+                "box_mask_fraction": 0.0356
+              },
+              "detection_iou": 0.0669
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000007386",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 855829,
+            "category_id": 2,
+            "category_name": "bicycle",
+            "mask_bbox_xyxy": [
+              222,
+              101,
+              290,
+              166
+            ]
+          },
+          "segment_pixels": 2274,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 2,
+              "class_id": 1,
+              "class_name": "bicycle",
+              "bbox_xyxy": [
+                221.85,
+                100.97,
+                289.87,
+                166.2
+              ],
+              "mask_pixels_in_box": 2274,
+              "segment_coverage": 1.0,
+              "box_mask_fraction": 0.4919,
+              "partner": {
+                "box_index": 3,
+                "class_id": 1,
+                "class_name": "bicycle",
+                "bbox_xyxy": [
+                  218.68,
+                  158.78,
+                  279.73,
+                  214.12
+                ],
+                "mask_pixels_in_box": 127,
+                "segment_coverage": 0.0558,
+                "box_mask_fraction": 0.0359
+              },
+              "detection_iou": 0.0581
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000021167",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 2,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 3552314,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              188,
+              39,
+              426,
+              640
+            ]
+          },
+          "segment_pixels": 97167,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 0,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                21.52,
+                114.73,
+                223.86,
+                625.58
+              ],
+              "mask_pixels_in_box": 6991,
+              "segment_coverage": 0.0719,
+              "box_mask_fraction": 0.0673,
+              "partner": {
+                "box_index": 3,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  187.98,
+                  38.89,
+                  426.0,
+                  640.0
+                ],
+                "mask_pixels_in_box": 97167,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.6753
+              },
+              "detection_iou": 0.0804
+            }
+          ]
+        },
+        {
+          "panoptic": {
+            "segment_id": 3158068,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              22,
+              115,
+              224,
+              626
+            ]
+          },
+          "segment_pixels": 77435,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 0,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                21.52,
+                114.73,
+                223.86,
+                625.58
+              ],
+              "mask_pixels_in_box": 77435,
+              "segment_coverage": 1.0,
+              "box_mask_fraction": 0.745,
+              "partner": {
+                "box_index": 3,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  187.98,
+                  38.89,
+                  426.0,
+                  640.0
+                ],
+                "mask_pixels_in_box": 7732,
+                "segment_coverage": 0.0999,
+                "box_mask_fraction": 0.0537
+              },
+              "detection_iou": 0.0804
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000021839",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 1123397,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              432,
+              457,
+              455,
+              526
+            ]
+          },
+          "segment_pixels": 896,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 2,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                409.56,
+                462.09,
+                435.38,
+                521.74
+              ],
+              "mask_pixels_in_box": 77,
+              "segment_coverage": 0.0859,
+              "box_mask_fraction": 0.0475,
+              "partner": {
+                "box_index": 3,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  431.61,
+                  457.19,
+                  456.65,
+                  525.86
+                ],
+                "mask_pixels_in_box": 896,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.4994
+              },
+              "detection_iou": 0.0741
+            },
+            {
+              "box_index": 2,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                409.56,
+                462.09,
+                435.38,
+                521.74
+              ],
+              "mask_pixels_in_box": 77,
+              "segment_coverage": 0.0859,
+              "box_mask_fraction": 0.0475,
+              "partner": {
+                "box_index": 14,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  450.73,
+                  472.52,
+                  461.13,
+                  525.12
+                ],
+                "mask_pixels_in_box": 58,
+                "segment_coverage": 0.0647,
+                "box_mask_fraction": 0.0895
+              },
+              "detection_iou": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000022935",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 5083584,
+            "category_id": 1,
+            "category_name": "person",
+            "mask_bbox_xyxy": [
+              423,
+              26,
+              634,
+              475
+            ]
+          },
+          "segment_pixels": 66012,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 1,
+              "class_id": 0,
+              "class_name": "person",
+              "bbox_xyxy": [
+                20.4,
+                18.36,
+                457.45,
+                473.66
+              ],
+              "mask_pixels_in_box": 6309,
+              "segment_coverage": 0.0956,
+              "box_mask_fraction": 0.0316,
+              "partner": {
+                "box_index": 2,
+                "class_id": 0,
+                "class_name": "person",
+                "bbox_xyxy": [
+                  422.83,
+                  25.89,
+                  634.25,
+                  474.61
+                ],
+                "mask_pixels_in_box": 66012,
+                "segment_coverage": 1.0,
+                "box_mask_fraction": 0.6887
+              },
+              "detection_iou": 0.0557
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "000000025139",
+      "candidate_type": "instance_merge",
+      "suggested_error_types": [
+        "instance_merge"
+      ],
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "panoptic": {
+            "segment_id": 6382953,
+            "category_id": 24,
+            "category_name": "zebra",
+            "mask_bbox_xyxy": [
+              0,
+              2,
+              342,
+              329
+            ]
+          },
+          "segment_pixels": 102525,
+          "supporting_detection_pairs": [
+            {
+              "box_index": 0,
+              "class_id": 22,
+              "class_name": "zebra",
+              "bbox_xyxy": [
+                0.0,
+                2.29,
+                341.63,
+                328.66
+              ],
+              "mask_pixels_in_box": 102525,
+              "segment_coverage": 1.0,
+              "box_mask_fraction": 0.9168,
+              "partner": {
+                "box_index": 1,
+                "class_id": 22,
+                "class_name": "zebra",
+                "bbox_xyxy": [
+                  313.73,
+                  28.52,
+                  458.59,
+                  248.44
+                ],
+                "mask_pixels_in_box": 2958,
+                "segment_coverage": 0.0289,
+                "box_mask_fraction": 0.0917
+              },
+              "detection_iou": 0.0447
             }
           ]
         }
