@@ -3,11 +3,11 @@ image,type,verdict,note
 000000001584,instance_merge,rejected,"Đây là cùng một xe buýt hai tầng; phần trên và phần dưới thuộc cùng một xe, không phải lỗi gộp hai instance."
 000000003934,instance_merge,rejected,Mỗi người trong ảnh đều được đánh dấu thành instance riêng; không thấy hai người bị gộp chung.
 000000005992,instance_merge,rejected,Cừu trong khung vàng và con mang nhãn sheep #4 là hai cá thể riêng; khung không cho thấy chúng bị gộp instance.
-000000008277,instance_merge,confirmed,Broccoli #11 có vẻ là một instance riêng; khung broccoli #12 gom nhiều miếng broccoli chồng nhau vào cùng một instance.
+000000008277,instance_merge,confirmed,"Mask segment broccoli màu tím trong khay trải trên nhiều miếng súp lơ tách biệt; một segment chứa cả cụm thay vì một miếng, nên xác nhận instance_merge."
 000000010092,instance_merge,rejected,Hai chiếc ghế trong ảnh được đánh dấu bằng hai box riêng; không có dấu hiệu bị gộp instance.
 000000012639,instance_merge,rejected,Person #12 và person #2 có box riêng; không ai bị gộp chung khung với người khác.
-000000012639,missing_box,confirmed,Ảnh bị thiếu box detection cho khoảng năm person; những người này vẫn nhìn thấy nhưng không có box tương ứng.
-000000013729,instance_merge,confirmed,Hai chiếc remote riêng biệt trong ảnh bị gộp chung vào một box remote #4.
-000000017182,instance_merge,confirmed,"Cả hai box vàng đều gom nhiều quyển sách riêng vào chung một khung, xác nhận lỗi gộp instance."
+000000012639,missing_box,confirmed,"Mask person ở tiền cảnh góc dưới trái phủ người đang ngồi; không có detection person khớp, box gần nhất lại thuộc baseball glove."
+000000013729,instance_merge,rejected,"Mask remote chỉ là dải rất nhỏ trên một điều khiển; segment không phủ hai remote riêng, còn bbox lớn chồng sang người cạnh bên, nên bác instance_merge."
+000000017182,instance_merge,rejected,"Mask book chỉ phủ một quyển ở hàng sách; quyển bên cạnh có vùng mask riêng, hai bbox sát nhau nhưng segment không gộp hai quyển."
 000000020553,instance_merge,rejected,Hai box teddybear #3 và #8 không gộp chung với teddy bear nào khác; mỗi box khoanh riêng.
 000000023751,class_swap,confirmed,Detection gán nhãn bird cho vật thể là cái diều; nhãn kite của panoptic phù hợp với hình.
