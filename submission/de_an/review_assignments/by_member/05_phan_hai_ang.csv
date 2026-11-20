@@ -1,11 +1,11 @@
 image,type,verdict,note
-img_0024,instance_merge,,
-img_0051,instance_merge,,
-img_0079,instance_merge,,
-img_0106,instance_merge,,
-img_0119,instance_merge,,
-img_0140,instance_merge,,
-img_0170,instance_merge,,
-img_0190,instance_merge,,
-img_0217,instance_merge,,
-img_0237,instance_merge,,
+img_0024,instance_merge,rejected,"Hai segment S1 (car #2) và S2 (car #10) đều chỉ phủ riêng từng xe nhỏ phía sau, bị mép trên box vàng xe xám phía trước chồng lên, không phải gộp 2 xe"
+img_0051,instance_merge,rejected,"Hai segment nhỏ S1 (bicycle 121 px góc phải) và S2 (chair #36 239 px) đều chỉ là một vật nhỏ bị box vật bên cạnh chồng mép, không gộp 2 vật"
+img_0079,instance_merge,rejected,"Segment S1 chỉ phủ đúng một chiếc ô bên phải (umbrella #11), không gộp với ô cầu vồng umbrella #12 chỉ bị chồng mép box"
+img_0106,instance_merge,rejected,"Năm segment S1 đến S5 mỗi mảng đều chỉ phủ riêng một người trong đám đông đứng sát nhau, bị các box vàng xung quanh chồng mép"
+img_0119,instance_merge,rejected,"S1 chỉ phủ một người quay lưng phía sau (person #3) và S2 chỉ phủ một người nhỏ đứng xa (person #5), bị box vàng hai người phía trước chồng mép"
+img_0140,instance_merge,rejected,"Segment S1 chỉ phủ phần vai/tay của người ở sát mép trái ảnh (person #4), bị cạnh trái box vàng person #0 chồng lên, không gộp 2 người"
+img_0170,instance_merge,rejected,"Segment S1 chỉ phủ hai chân của một con ngựa chạy phía sau (horse #6), bị góc dưới phải box vàng horse #0 chồng lên, không gộp 2 ngựa"
+img_0190,instance_merge,rejected,"Segment S1 (273 px) khớp đúng một đèn giao thông (traffic light #2), không gộp với traffic light #1 chỉ giao nhẹ mép box bên cạnh"
+img_0217,instance_merge,rejected,"Hai segment nhỏ S1 (305 px) và S2 (440 px) đều chỉ phủ từng người đứng xa phía sau, nằm lọt trong phần trên box vàng người đi bộ phía trước, không gộp 2 người"
+img_0237,instance_merge,rejected,"Ba segment S1, S2, S3 mỗi màu phủ riêng từng chiếc thuyền neo sát nhau cạnh cầu tàu, chỉ chồng mép box vàng bên cạnh chứ không gộp thuyền"
