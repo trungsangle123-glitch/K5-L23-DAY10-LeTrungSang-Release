@@ -1,12 +1,12 @@
 image,type,verdict,note
-img_0009,instance_merge,,
-img_0039,instance_merge,,
-img_0064,instance_merge,,
-img_0097,class_disagreement,,
-img_0117,instance_merge,,
-img_0134,instance_merge,,
-img_0167,instance_merge,,
-img_0181,missing_box,,
-img_0210,instance_merge,,
-img_0226,instance_merge,,
-img_0247,class_disagreement,,
+img_0009,instance_merge,rejected,"S1 chỉ phủ một nhánh/quả đơn lẻ ở góc trên bên phải buồng chuối, không gộp nhiều quả chuối riêng biệt."
+img_0039,instance_merge,rejected,"Vùng mask S1 rất nhỏ, chỉ phủ một mẩu bông cải xanh đơn lẻ trên mặt pizza, không gộp hai bông tách biệt."
+img_0064,instance_merge,rejected,"S1 chỉ bao phủ duy nhất một băng ghế nhỏ ở nền phía sau gấu bông, hoàn toàn tách biệt với băng ghế lớn ở tiền cảnh."
+img_0097,class_swap,confirmed,"Vật gắn trên tường phía trên lò sưởi ở góc trên bên phải là tivi (tv), hộp detection gán nhầm thành laptop."
+img_0117,instance_merge,rejected,"Các vùng S1-S2 chỉ phủ từng người riêng lẻ ở nền sau, còn S3-S7 chỉ phủ từng quả chuối/táo nhỏ lẻ trên sạp, không gộp hai vật tách biệt."
+img_0134,instance_merge,rejected,"S1 chỉ phủ duy nhất chiếc xe máy thứ hai đỗ ở phía sau, tách biệt hoàn toàn với chiếc xe máy màu đỏ ở tiền cảnh."
+img_0167,instance_merge,rejected,"S1 chỉ phủ phần lưng một chiếc ghế người đang ngồi, còn S2 và S3 là các mảnh nhỏ trên ghế kế bên, không gộp nhiều ghế riêng biệt."
+img_0181,missing_box,confirmed,"S1 nằm trên chiếc xe buýt đỏ thứ hai ở sát mép phải, hoàn toàn nằm ngoài box cyan bus #1 và không có box detection nào bao quanh."
+img_0210,instance_merge,rejected,"S1 chỉ phủ một góc mặt bàn ăn duy nhất lộ ra giữa đĩa bánh mì và các chai lọ, không có hai bàn riêng biệt bị gộp."
+img_0226,instance_merge,rejected,"S1 chỉ phủ phần thân của vận động viên đang phát bóng; không thấy segment này bao gồm người chơi nào khác."
+img_0247,class_swap,confirmed,"Vật trong khung vàng có hình dáng sải cánh dài giống chim đang bay lượn (tương tự bird #1 phía trên), hộp detection gán nhầm thành kite."
