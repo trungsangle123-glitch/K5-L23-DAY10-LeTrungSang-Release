@@ -1,13 +1,13 @@
 image,type,verdict,note
-img_0002,instance_merge,,
-img_0025,instance_merge,,
-img_0052,instance_merge,,
-img_0091,instance_merge,,
-img_0107,instance_merge,,
-img_0120,instance_merge,,
-img_0150,instance_merge,,
-img_0173,instance_merge,,
-img_0205,bbox_drift,,
-img_0205,instance_merge,,
-img_0219,instance_merge,,
-img_0243,instance_merge,,
+img_0002,instance_merge,rejected,"S1 là một người riêng; hai box person chỉ chồng phần người đó, không thấy hai vật bị gộp."
+img_0025,instance_merge,rejected,"Trong ảnh S1 chỉ thuộc một phi công riêng, box lớn không cho thấy hai instance cùng một segment."
+img_0052,instance_merge,rejected,"Đoạn S1 là một chiếc ô tô màu đỏ, không bao trùm hai xe riêng biệt trong ảnh."
+img_0091,instance_merge,rejected,"Ba vùng S1-S3 tương ứng các phần của hai người riêng; không có bằng chứng một segment gộp hai người."
+img_0107,instance_merge,rejected,"Xe đạp, ô tô và từng ô che là các đối tượng riêng, không thấy một segment gộp nhiều instance."
+img_0120,instance_merge,rejected,"S1 nằm trên phần hai người ngồi gần nhau nhưng không cho thấy rõ hai instance được gộp thành một."
+img_0150,instance_merge,rejected,"S1 chỉ bao vùng một người trên sân; box lớn và box nhỏ vẫn mô tả cùng một batter."
+img_0173,instance_merge,rejected,"S1 thuộc một người trượt ván riêng; các box lồng nhau không chứng minh hai người bị gộp."
+img_0205,bbox_drift,confirmed,"Box suitcase ở góc phải chỉ khớp một phần nhỏ trong khi segment S1 rộng sang nhiều vali liên kề."
+img_0205,instance_merge,confirmed,"Segment S1 bao một chuỗi vali liên kề và hai box khác nhau nằm ở hai đầu của cùng một vùng."
+img_0219,instance_merge,rejected,"S1 là một hành khách đứng cạnh cửa tàu; box lớn chỉ bao trùm người đó và không thấy hai instance."
+img_0243,instance_merge,rejected,"S1 và các box cùng nằm trên một xe mô tô, không xuất hiện hai xe mô tô bị gộp."
