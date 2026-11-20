@@ -1,0 +1,56 @@
+image,type,verdict,note
+img_0002,instance_merge,rejected,"[le_trung_sang] S1 là một người riêng; hai box person chỉ chồng phần người đó, không thấy hai vật bị gộp."
+img_0006,missing_box,confirmed,[luong_hoang_bao_tran] S1 phủ phần thân một người ngồi phía sau bàn ở góc trên bên trái nhưng hoàn toàn không có box cyan person bao quanh.
+img_0009,instance_merge,rejected,"[nguyen_anh_tien] S1 chỉ phủ một nhánh/quả đơn lẻ ở góc trên bên phải buồng chuối, không gộp nhiều quả chuối riêng biệt."
+img_0023,instance_merge,rejected,"[vu_tuyet_trinh] S1 la 1 dom nho mo sau vai dau bep (co the la mat nguoi o xa), chi 1 vat, lot vao box #0 do dung phia sau; khong gop 2 vat"
+img_0024,instance_merge,rejected,"[phan_hai_ang] Hai segment S1 (car #2) và S2 (car #10) đều chỉ phủ riêng từng xe nhỏ phía sau, bị mép trên box vàng xe xám phía trước chồng lên, không phải gộp 2 xe"
+img_0025,instance_merge,rejected,"[le_trung_sang] Trong ảnh S1 chỉ thuộc một phi công riêng, box lớn không cho thấy hai instance cùng một segment."
+img_0037,instance_merge,rejected,"[luong_hoang_bao_tran] S1 chỉ phủ duy nhất một chiếc thuyền buồm nhỏ ở xa phía bên phải, tách biệt với thuyền lớn boat #1 bên cạnh."
+img_0039,instance_merge,rejected,"[nguyen_anh_tien] Vùng mask S1 rất nhỏ, chỉ phủ một mẩu bông cải xanh đơn lẻ trên mặt pizza, không gộp hai bông tách biệt."
+img_0048,category_swap,confirmed,"[vu_tuyet_trinh] vat trong S1 la ghe sofa do boc nem (tua lung, tay vin, 3 nem ngoi) dat tren via he; detection ghi couch dung, panoptic ghi microwave sai"
+img_0051,instance_merge,rejected,"[phan_hai_ang] Hai segment nhỏ S1 (bicycle 121 px góc phải) và S2 (chair #36 239 px) đều chỉ là một vật nhỏ bị box vật bên cạnh chồng mép, không gộp 2 vật"
+img_0052,instance_merge,rejected,"[le_trung_sang] Đoạn S1 là một chiếc ô tô màu đỏ, không bao trùm hai xe riêng biệt trong ảnh."
+img_0060,instance_merge,rejected,"[luong_hoang_bao_tran] Các vùng S1, S2, S3 và S4 đều rất nhỏ, mỗi segment chỉ nằm trên một người riêng lẻ đứng cạnh đoàn tàu, không gộp hai người."
+img_0064,instance_merge,rejected,"[nguyen_anh_tien] S1 chỉ bao phủ duy nhất một băng ghế nhỏ ở nền phía sau gấu bông, hoàn toàn tách biệt với băng ghế lớn ở tiền cảnh."
+img_0078,instance_merge,rejected,"[vu_tuyet_trinh] S1 va S2 moi vung chi la phan lo ra cua 1 cay xuc xich bi cay khac de len; xuc xich nam sat, xep cheo nen box chong nhau, khong gop 2 cay"
+img_0079,instance_merge,rejected,"[phan_hai_ang] Segment S1 chỉ phủ đúng một chiếc ô bên phải (umbrella #11), không gộp với ô cầu vồng umbrella #12 chỉ bị chồng mép box"
+img_0091,instance_merge,rejected,[le_trung_sang] Ba vùng S1-S3 tương ứng các phần của hai người riêng; không có bằng chứng một segment gộp hai người.
+img_0093,instance_merge,rejected,"[luong_hoang_bao_tran] S1 chỉ bao phủ duy nhất phần lưng chiếc băng ghế ngoài cùng bên trái, tách biệt với băng ghế người đàn ông đang ngồi."
+img_0097,class_swap,confirmed,"[nguyen_anh_tien] Vật gắn trên tường phía trên lò sưởi ở góc trên bên phải là tivi (tv), hộp detection gán nhầm thành laptop."
+img_0098,instance_merge,rejected,"[vu_tuyet_trinh] S1/S2/S3 moi vung la than 1 nguoi hang sau (ao vest, ca vat, dau bi cat o mep tren), dung giua 2 hoc sinh hang truoc nen bi chia cho 2 box; khong gop 2 nguoi"
+img_0106,instance_merge,rejected,"[phan_hai_ang] Năm segment S1 đến S5 mỗi mảng đều chỉ phủ riêng một người trong đám đông đứng sát nhau, bị các box vàng xung quanh chồng mép"
+img_0107,instance_merge,rejected,"[le_trung_sang] Xe đạp, ô tô và từng ô che là các đối tượng riêng, không thấy một segment gộp nhiều instance."
+img_0115,instance_merge,rejected,"[luong_hoang_bao_tran] S1 và S2 chỉ là hai mảng nhỏ nằm trên từng chiếc thuyền riêng lẻ ở khu vực trung tâm bến tàu ban đêm, không gộp hai thuyền."
+img_0117,instance_merge,rejected,"[nguyen_anh_tien] Các vùng S1-S2 chỉ phủ từng người riêng lẻ ở nền sau, còn S3-S7 chỉ phủ từng quả chuối/táo nhỏ lẻ trên sạp, không gộp hai vật tách biệt."
+img_0118,instance_merge,rejected,"[vu_tuyet_trinh] S1 chi la phan lo ra (cua so) cua 1 xe do phia sau, bi SUV xam va sedan sam mau che; xe do sat nen box chong nhau, khong gop 2 xe"
+img_0119,instance_merge,rejected,"[phan_hai_ang] S1 chỉ phủ một người quay lưng phía sau (person #3) và S2 chỉ phủ một người nhỏ đứng xa (person #5), bị box vàng hai người phía trước chồng mép"
+img_0120,instance_merge,rejected,[le_trung_sang] S1 nằm trên phần hai người ngồi gần nhau nhưng không cho thấy rõ hai instance được gộp thành một.
+img_0123,instance_merge,rejected,"[luong_hoang_bao_tran] S1 chỉ bao phủ duy nhất người đang cúi trên ván lướt sóng ở góc dưới bên trái, không gộp với người đứng phía sau."
+img_0134,instance_merge,rejected,"[nguyen_anh_tien] S1 chỉ phủ duy nhất chiếc xe máy thứ hai đỗ ở phía sau, tách biệt hoàn toàn với chiếc xe máy màu đỏ ở tiền cảnh."
+img_0136,instance_merge,rejected,"[vu_tuyet_trinh] S1 la dau cua 1 nguoi thu ba lo len tu duoi tam van luot song (thay ro mat), co box rieng #3; cham box #4 vi nam sat duoi tay nguoi ao ba lo, khong gop 2 nguoi"
+img_0140,instance_merge,rejected,"[phan_hai_ang] Segment S1 chỉ phủ phần vai/tay của người ở sát mép trái ảnh (person #4), bị cạnh trái box vàng person #0 chồng lên, không gộp 2 người"
+img_0150,instance_merge,rejected,[le_trung_sang] S1 chỉ bao vùng một người trên sân; box lớn và box nhỏ vẫn mô tả cùng một batter.
+img_0164,instance_merge,rejected,"[luong_hoang_bao_tran] Các vùng S1, S2 và S3 lần lượt phủ phần lưng của từng chiếc ghế xanh riêng lẻ xếp quanh bàn ăn, không gộp hai ghế vào nhau."
+img_0167,instance_merge,rejected,"[nguyen_anh_tien] S1 chỉ phủ phần lưng một chiếc ghế người đang ngồi, còn S2 và S3 là các mảnh nhỏ trên ghế kế bên, không gộp nhiều ghế riêng biệt."
+img_0168,instance_merge,rejected,"[vu_tuyet_trinh] S1 la 1 nguoi dung xa o nen tuong graffiti (thay du dang dau, than, 2 chan), co box rieng #13; lot vao box #9 cua nguoi truot van ao nau phia truoc, khong gop 2 nguoi"
+img_0170,instance_merge,rejected,"[phan_hai_ang] Segment S1 chỉ phủ hai chân của một con ngựa chạy phía sau (horse #6), bị góc dưới phải box vàng horse #0 chồng lên, không gộp 2 ngựa"
+img_0173,instance_merge,rejected,[le_trung_sang] S1 thuộc một người trượt ván riêng; các box lồng nhau không chứng minh hai người bị gộp.
+img_0176,missing_box,confirmed,[luong_hoang_bao_tran] S1 phủ toàn bộ khuôn mặt và vai người đàn ông rất rõ trong ảnh nhưng hoàn toàn thiếu box detection lớp person (chỉ có box orange #0).
+img_0181,missing_box,confirmed,"[nguyen_anh_tien] S1 nằm trên chiếc xe buýt đỏ thứ hai ở sát mép phải, hoàn toàn nằm ngoài box cyan bus #1 và không có box detection nào bao quanh."
+img_0183,missing_box,rejected,"[vu_tuyet_trinh] S1 la vien mong quanh nguoi dan ong doi mu xanh, coi tran dang quy sua dieu; nguoi nay da co box person #0 bao quanh, khong thieu box"
+img_0190,instance_merge,rejected,"[phan_hai_ang] Segment S1 (273 px) khớp đúng một đèn giao thông (traffic light #2), không gộp với traffic light #1 chỉ giao nhẹ mép box bên cạnh"
+img_0205,bbox_drift,confirmed,[le_trung_sang] Box suitcase ở góc phải chỉ khớp một phần nhỏ trong khi segment S1 rộng sang nhiều vali liên kề.
+img_0205,instance_merge,confirmed,[le_trung_sang] Segment S1 bao một chuỗi vali liên kề và hai box khác nhau nằm ở hai đầu của cùng một vùng.
+img_0207,instance_merge,rejected,"[luong_hoang_bao_tran] S1, S2 và S3 chỉ phủ các phần nhỏ tách biệt của từng con bò riêng lẻ trong đàn đang đi trên đường, không gộp nhiều con bò."
+img_0210,instance_merge,rejected,"[nguyen_anh_tien] S1 chỉ phủ một góc mặt bàn ăn duy nhất lộ ra giữa đĩa bánh mì và các chai lọ, không có hai bàn riêng biệt bị gộp."
+img_0212,instance_merge,rejected,"[vu_tuyet_trinh] S1, S2 la 2 nguoi rieng trong 1 anh con cua anh ghep, moi mask phu dung 1 nguoi, co box rieng #3, #5; chi lot vao box #1 cua nguoi dang nhay o anh chinh, khong gop"
+img_0217,instance_merge,rejected,"[phan_hai_ang] Hai segment nhỏ S1 (305 px) và S2 (440 px) đều chỉ phủ từng người đứng xa phía sau, nằm lọt trong phần trên box vàng người đi bộ phía trước, không gộp 2 người"
+img_0219,instance_merge,rejected,[le_trung_sang] S1 là một hành khách đứng cạnh cửa tàu; box lớn chỉ bao trùm người đó và không thấy hai instance.
+img_0225,instance_merge,rejected,"[luong_hoang_bao_tran] S1 là một mảng rất nhỏ (55px) chỉ nằm trên một chiếc ghế ngoài trời ở góc dưới bên phải, không gộp hai ghế riêng biệt."
+img_0226,instance_merge,rejected,[nguyen_anh_tien] S1 chỉ phủ phần thân của vận động viên đang phát bóng; không thấy segment này bao gồm người chơi nào khác.
+img_0230,instance_merge,rejected,"[vu_tuyet_trinh] S1 la manh lo ra cua 1 chiec donut bi cat o mep phai anh, kep giua donut #4 va #3, co box rieng #11; banh xep chong sat nen box chong nhau, khong gop 2 banh"
+img_0237,instance_merge,rejected,"[phan_hai_ang] Ba segment S1, S2, S3 mỗi màu phủ riêng từng chiếc thuyền neo sát nhau cạnh cầu tàu, chỉ chồng mép box vàng bên cạnh chứ không gộp thuyền"
+img_0243,instance_merge,rejected,"[le_trung_sang] S1 và các box cùng nằm trên một xe mô tô, không xuất hiện hai xe mô tô bị gộp."
+img_0245,instance_merge,rejected,"[luong_hoang_bao_tran] S1 phủ người mặc áo sọc đỏ bên trái, S3 phủ người áo trắng phía sau và S2 phủ một phần người ở mép phải; cả ba đều tách biệt, không gộp hai người."
+img_0247,class_swap,confirmed,"[nguyen_anh_tien] Vật trong khung vàng có hình dáng sải cánh dài giống chim đang bay lượn (tương tự bird #1 phía trên), hộp detection gán nhầm thành kite."
+img_0250,instance_merge,rejected,"[vu_tuyet_trinh] S1 chi la dau va vai cua 1 nguoi toc sang dung sau nguoi ao be deo ba lo, co box rieng #18; dai ao toi cham sat nguoi toc den ben phai nhung dau nguoi do nam ngoai mask; lot vao box #17, khong gop 2 nguoi"

@@ -36,4 +36,4 @@ Báo mọi ứng viên sẽ làm tăng false positive và giảm precision, kéo
 - **Kết quả trên seed 34:** `tier_a = 2`, `tier_b = 4`, `notify = 4`; tự kiểm bằng `score_findings.py` đạt `tier_a 1.0 · tier_b 1.0 · notify 1.0`.
 
 ## 6. Bug hoặc điểm chưa rõ trong lab (nếu có)
-Không phát hiện bug cản trở việc hoàn thành seed 34. Một điểm cần lưu ý là `runs/r34/security.md` đã được copy sang seed nộp, còn đề ẩn cần hoàn thành riêng khi nhận `de_an.zip`; không được bịa kết quả đề ẩn trước khi nhận dữ liệu.
+Không phát hiện bug cản trở việc hoàn thành seed 34. Đề ẩn đã được xử lý: validator sinh 11 lỗi luật và 55 ứng viên trên 54 ảnh; nhóm review đủ 55 dòng, gồm 8 `confirmed` và 47 `rejected`. Sau khi gộp, `submission/de_an/errors.json` có 19 lỗi; truy vết có `tier_a = 2`, `tier_b = 5`, `notify = 5`. Không đọc `_private/` và không báo F1 cho đề ẩn.
