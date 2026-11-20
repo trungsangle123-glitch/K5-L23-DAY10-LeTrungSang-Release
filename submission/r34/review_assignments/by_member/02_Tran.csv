@@ -1,13 +1,13 @@
 image,type,verdict,note
-000000000872,missing_box,confirmed,Thiếu box detection quanh người đang cầm bóng; găng tay và trái bóng đã được đánh dấu đúng.
-000000001584,instance_merge,rejected,"Đây là cùng một xe buýt hai tầng; phần trên và phần dưới thuộc cùng một xe, không phải lỗi gộp hai instance."
-000000003934,instance_merge,rejected,Mỗi người trong ảnh đều được đánh dấu thành instance riêng; không thấy hai người bị gộp chung.
-000000005992,instance_merge,rejected,Cừu trong khung vàng và con mang nhãn sheep #4 là hai cá thể riêng; khung không cho thấy chúng bị gộp instance.
-000000008277,instance_merge,confirmed,"Mask segment broccoli màu tím trong khay trải trên nhiều miếng súp lơ tách biệt; một segment chứa cả cụm thay vì một miếng, nên xác nhận instance_merge."
-000000010092,instance_merge,rejected,Hai chiếc ghế trong ảnh được đánh dấu bằng hai box riêng; không có dấu hiệu bị gộp instance.
-000000012639,instance_merge,rejected,Person #12 và person #2 có box riêng; không ai bị gộp chung khung với người khác.
-000000012639,missing_box,confirmed,"Mask person ở tiền cảnh góc dưới trái phủ người đang ngồi; không có detection person khớp, box gần nhất lại thuộc baseball glove."
-000000013729,instance_merge,rejected,"Mask remote chỉ là dải rất nhỏ trên một điều khiển; segment không phủ hai remote riêng, còn bbox lớn chồng sang người cạnh bên, nên bác instance_merge."
-000000017182,instance_merge,rejected,"Mask book chỉ phủ một quyển ở hàng sách; quyển bên cạnh có vùng mask riêng, hai bbox sát nhau nhưng segment không gộp hai quyển."
-000000020553,instance_merge,rejected,Hai box teddybear #3 và #8 không gộp chung với teddy bear nào khác; mỗi box khoanh riêng.
-000000023751,class_swap,confirmed,Detection gán nhãn bird cho vật thể là cái diều; nhãn kite của panoptic phù hợp với hình.
+000000000872,missing_box,confirmed,Không có box detection quanh người đang cầm bóng; các box găng tay và trái bóng vẫn có.
+000000001584,instance_merge,rejected,"Khung vàng bao trùm cùng một xe buýt hai tầng; phần trên và dưới là các phần của cùng chiếc xe, không phải hai xe bị gộp chung box."
+000000003934,instance_merge,rejected,Mỗi người trong ảnh đều có box riêng; không thấy box nào bao gồm nhiều người.
+000000005992,instance_merge,rejected,Các con cừu được khoanh bằng box riêng; box sheep #4 không gộp nó với con trong box vàng.
+000000008277,instance_merge,confirmed,Box broccoli #11 có vẻ khoanh một phần riêng; box broccoli #12 bao gồm nhiều miếng broccoli chồng nhau.
+000000010092,instance_merge,rejected,Hai chiếc ghế được khoanh bằng hai box riêng; không có box nào gồm cả hai ghế.
+000000012639,instance_merge,rejected,Person #12 và person #2 nằm trong hai box riêng; không có box nào gồm họ với người khác.
+000000012639,missing_box,confirmed,"Thiếu box cho 5 người: 2 người quay lưng ở xa nhất; 1 bé trai áo cam giữa person #6 và person #10; 2 người ngồi bên gốc cây mép trái, phía sau person #0."
+000000013729,instance_merge,confirmed,Hai chiếc remote riêng bị khoanh chung trong một box remote #4.
+000000017182,instance_merge,confirmed,Cả hai box vàng đều bao gồm nhiều quyển sách; mỗi box đang gom các quyển riêng vào cùng một box.
+000000020553,instance_merge,rejected,Hai box teddybear #3 và #8 khoanh riêng; không box nào bao gồm thêm teddy bear khác.
+000000023751,class_swap,confirmed,Box detection gán nhãn bird cho vật thể là cái diều; box panoptic ghi kite phù hợp với hình.
