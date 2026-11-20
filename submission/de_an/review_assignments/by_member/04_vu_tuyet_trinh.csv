@@ -1,12 +1,12 @@
 image,type,verdict,note
-img_0023,instance_merge,,
-img_0048,class_disagreement,,
-img_0078,instance_merge,,
-img_0098,instance_merge,,
-img_0118,instance_merge,,
-img_0136,instance_merge,,
-img_0168,instance_merge,,
-img_0183,missing_box,,
-img_0212,instance_merge,,
-img_0230,instance_merge,,
-img_0250,instance_merge,,
+img_0023,instance_merge,rejected,"S1 la 1 dom nho mo sau vai dau bep (co the la mat nguoi o xa), chi 1 vat, lot vao box #0 do dung phia sau; khong gop 2 vat"
+img_0048,category_swap,confirmed,"vat trong S1 la ghe sofa do boc nem (tua lung, tay vin, 3 nem ngoi) dat tren via he; detection ghi couch dung, panoptic ghi microwave sai"
+img_0078,instance_merge,rejected,"S1 va S2 moi vung chi la phan lo ra cua 1 cay xuc xich bi cay khac de len; xuc xich nam sat, xep cheo nen box chong nhau, khong gop 2 cay"
+img_0098,instance_merge,rejected,"S1/S2/S3 moi vung la than 1 nguoi hang sau (ao vest, ca vat, dau bi cat o mep tren), dung giua 2 hoc sinh hang truoc nen bi chia cho 2 box; khong gop 2 nguoi"
+img_0118,instance_merge,rejected,"S1 chi la phan lo ra (cua so) cua 1 xe do phia sau, bi SUV xam va sedan sam mau che; xe do sat nen box chong nhau, khong gop 2 xe"
+img_0136,instance_merge,rejected,"S1 la dau cua 1 nguoi thu ba lo len tu duoi tam van luot song (thay ro mat), co box rieng #3; cham box #4 vi nam sat duoi tay nguoi ao ba lo, khong gop 2 nguoi"
+img_0168,instance_merge,rejected,"S1 la 1 nguoi dung xa o nen tuong graffiti (thay du dang dau, than, 2 chan), co box rieng #13; lot vao box #9 cua nguoi truot van ao nau phia truoc, khong gop 2 nguoi"
+img_0183,missing_box,rejected,"S1 la vien mong quanh nguoi dan ong doi mu xanh, coi tran dang quy sua dieu; nguoi nay da co box person #0 bao quanh, khong thieu box"
+img_0212,instance_merge,rejected,"S1, S2 la 2 nguoi rieng trong 1 anh con cua anh ghep, moi mask phu dung 1 nguoi, co box rieng #3, #5; chi lot vao box #1 cua nguoi dang nhay o anh chinh, khong gop"
+img_0230,instance_merge,rejected,"S1 la manh lo ra cua 1 chiec donut bi cat o mep phai anh, kep giua donut #4 va #3, co box rieng #11; banh xep chong sat nen box chong nhau, khong gop 2 banh"
+img_0250,instance_merge,rejected,"S1 chi la dau va vai cua 1 nguoi toc sang dung sau nguoi ao be deo ba lo, co box rieng #18; dai ao toi cham sat nguoi toc den ben phai nhung dau nguoi do nam ngoai mask; lot vao box #17, khong gop 2 nguoi"
