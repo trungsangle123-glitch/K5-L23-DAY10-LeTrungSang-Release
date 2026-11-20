@@ -164,7 +164,6 @@ image,scene_id,split,job_id,annotator,reviewer,guideline
 000000017436,scene_958,train,J07,A05,Q02,v1.3
 000000017627,scene_958,train,J07,A05,Q02,v1.3
 000000017714,scene_161,train,J08,A01,Q03,v1.3
-000000017899,scene_161,train,J08,A01,Q03,v1.3
 000000017905,scene_161,train,J08,A01,Q03,v1.3
 000000017959,scene_161,train,J08,A01,Q03,v1.3
 000000018150,scene_161,train,J08,A01,Q03,v1.3
@@ -206,7 +205,6 @@ image,scene_id,split,job_id,annotator,reviewer,guideline
 000000022589,scene_398,train,J09,A04,Q01,v1.3
 000000022623,scene_398,train,J09,A04,Q01,v1.3
 000000022705,scene_398,train,J09,A04,Q01,v1.3
-000000022892,scene_398,train,J09,A04,Q01,v1.3
 000000022935,scene_490,val,J09,A04,Q01,v1.3
 000000022969,scene_490,val,J09,A04,Q01,v1.3
 000000023023,scene_490,val,J09,A04,Q01,v1.3
@@ -232,7 +230,6 @@ image,scene_id,split,job_id,annotator,reviewer,guideline
 000000025181,scene_563,train,J10,A02,Q03,v1.3
 000000025228,scene_563,train,J10,A02,Q03,v1.3
 000000025386,scene_648,train,J10,A02,Q03,v1.3
-000000025393,scene_648,train,J10,A02,Q03,v1.3
 000000025394,scene_648,train,J10,A02,Q03,v1.3
 000000025424,scene_648,train,J10,A02,Q03,v1.3
 000000025560,scene_648,train,J10,A02,Q03,v1.3

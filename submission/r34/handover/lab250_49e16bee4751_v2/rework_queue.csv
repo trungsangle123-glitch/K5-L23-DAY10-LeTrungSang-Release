@@ -10,5 +10,8 @@ image,type,annotator,reviewer,action
 000000016958,invalid_class,A05,Q02,reannotate_detection
 000000017031,duplicate_box,A05,Q02,reannotate_detection
 000000017178,bbox_out_of_bounds,A05,Q02,reannotate_detection
+000000017899,bbox_drift,A01,Q03,reannotate_detection
 000000022755,missing_image,A04,Q01,reannotate_detection
+000000022892,bbox_drift,A04,Q01,reannotate_detection
 000000023751,class_swap,A02,Q03,reannotate_detection
+000000025393,bbox_drift,A02,Q03,reannotate_detection
