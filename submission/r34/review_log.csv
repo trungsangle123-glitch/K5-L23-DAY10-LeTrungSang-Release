@@ -1,0 +1,58 @@
+image,type,verdict,note
+000000000139,instance_merge,confirmed,[Sang] Hai chiếc ghế ăn riêng biệt nằm trong cùng một vùng segment chair; detection ghi hai box ghế.
+000000000872,missing_box,confirmed,[Tran] Không có box detection quanh người đang cầm bóng; các box găng tay và trái bóng vẫn có.
+000000001000,instance_merge,confirmed,"[Tien] Mask person phủ vùng của hai người đứng sát nhau, áo xanh và áo đỏ; hai box person riêng cùng chạm vùng mask nên instance bị gộp."
+000000001268,class_swap,confirmed,"[Trinh] vat trong vung do la con vit (thuoc lop bird), khong phai dieu; detection ghi kite la sai, panoptic ghi bird dung"
+000000001353,instance_merge,rejected,"[Dang] Box vàng person #3 trùm mép lên người phía sau; mask tím chỉ phủ một người ở person #6 do che khuất, không phải gộp 2 người"
+000000001532,instance_merge,rejected,[Sang] Chỉ thấy một chiếc ô tô SUV riêng lẻ trong vùng ứng viên; hai vật không chồng hoặc tách thực thể.
+000000001584,instance_merge,rejected,"[Tran] Khung vàng bao trùm cùng một xe buýt hai tầng; phần trên và dưới là các phần của cùng chiếc xe, không phải hai xe bị gộp chung box."
+000000001818,missing_box,confirmed,"[Tien] Ảnh có hai con ngựa vằn; con bên trái bị cắt ở mép ảnh và nằm ngoài box cyan, box hiện có chỉ ôm con bên phải."
+000000002153,instance_merge,rejected,"[Trinh] vung tim chi la 1 nguoi (trong tai) dung sau nguoi danh bong va nguoi bat bong; than trong tai lan vao 2 khung vang nen bi bao nham, 2 nguoi kia khong bi gop mask"
+000000002157,category_swap,confirmed,[Dang] Vật trong box vàng là dao cắt bánh (knife) tay cầm nơ hồng nhưng panoptic gán nhầm thành fork
+000000002685,instance_merge,rejected,"[Sang] Nhiều người đứng chồng lên nhau là tình huống che tự nhiên, không thấy một segment bắt rõ hai vật riêng."
+000000003934,instance_merge,rejected,[Tran] Mỗi người trong ảnh đều có box riêng; không thấy box nào bao gồm nhiều người.
+000000004134,instance_merge,rejected,"[Tien] Các segment panoptic person màu tím tách riêng từng người; segment bên phải chỉ phủ một người, không kéo sang người bắt tay cạnh đó."
+000000005001,instance_merge,rejected,"[Trinh] 3 vung tim la mat cua 3 nguoi dung phia sau (#6, #8, #11), moi nguoi co khung rieng; mat ho lot vao khung to cua nguoi dung truoc nen bi bao nham, khong co mask nao gop 2 nguoi"
+000000005193,instance_merge,rejected,"[Dang] Hai mask tím chỉ phủ riêng lẻ người ở cửa (person #2) và em bé áo sọc (person #8), không gộp với các box vàng chồng mép xung quanh"
+000000005477,instance_merge,rejected,[Sang] Trong ảnh chỉ có một máy bay làm vật chính; không thấy nhiều thể riêng bị gộp thành một segment.
+000000005992,instance_merge,rejected,[Tran] Các con cừu được khoanh bằng box riêng; box sheep #4 không gộp nó với con trong box vàng.
+000000006763,instance_merge,rejected,"[Tien] Segment panoptic person ở mép trái chỉ phủ người áo tím bị cắt khung; không nối sang người đàn ông giữa ảnh, dù box detection rộng chồng lên."
+000000006771,instance_merge,rejected,"[Trinh] 2 vung tim la 2 nguoi dung xa phia sau (#8 va #4), moi vung chi phu 1 nguoi va co khung rieng; bi khung to cua co gai doi mu vang (#7) lan len nen bi bao nham"
+000000007108,instance_merge,rejected,"[Dang] Mask tím chỉ phủ phần chân sau và đuôi của con voi đứng phía sau (elephant #3), không gộp với con voi lớn đứng trước do box vàng chồng mép"
+000000007816,instance_merge,rejected,"[Sang] Người lái và những người bên cạnh là nhiều người đứng gần nhau, không xác nhận bị gộp thành một thể."
+000000008277,instance_merge,confirmed,[Tran] Box broccoli #11 có vẻ khoanh một phần riêng; box broccoli #12 bao gồm nhiều miếng broccoli chồng nhau.
+000000008844,instance_merge,rejected,[Tien] Mask banana là một vùng cục bộ ở mép các box của nải chuối; không thấy một mask nối nhiều quả thành cùng một instance.
+000000009378,instance_merge,rejected,"[Trinh] 3 mang tim o dam dong khan gia mo va toi phia sau; 2 mang chi phu 1 nguoi, 1 mang chi lem nhe sang mep nguoi ben canh do dung sat nhau, khong phu tron 2 nguoi tach roi"
+000000009400,instance_merge,rejected,"[Dang] Mask tím chỉ phủ đầu và vai của người ngồi bàn sau (person #9), không gộp với person #2 phía trước do góc trên box vàng chồng mép"
+000000009891,instance_merge,rejected,[Sang] Chỉ có một người trong vùng segment ứng viên; vật lân cận xe và xe đẩy không tạo hai instance cùng loại.
+000000010092,instance_merge,rejected,[Tran] Hai chiếc ghế được khoanh bằng hai box riêng; không có box nào gồm cả hai ghế.
+000000010707,instance_merge,confirmed,[Tien] Vùng mask person bắc qua người ngồi áo sẫm và người đứng áo trắng; hai cá thể riêng bị gộp trong một instance.
+000000011149,class_swap,confirmed,"[Trinh] vat trong vung do la xe dap (khung manh, ban dap, khong co dong co); detection ghi motorcycle la sai, panoptic ghi bicycle dung"
+000000011760,bbox_drift,rejected,"[Dang] Box vàng zebra #0 ôm sát vật, không bị lệch; máy báo nhầm do segment panoptic bị gộp chung với zebra #1 bên cạnh"
+000000011760,instance_merge,confirmed,[Dang] Hai con ngựa vằn zebra #1 và zebra #0 đứng tách rời nhau nhưng mask tím panoptic gộp cả hai thành một segment
+000000011813,missing_box,rejected,[Sang] Vật nổi bật trong ảnh là laptop và chân máy; đối tượng được gắn nhãn chair không rõ thành vật cần box.
+000000012639,instance_merge,rejected,[Tran] Person #12 và person #2 nằm trong hai box riêng; không có box nào gồm họ với người khác.
+000000012639,missing_box,confirmed,"[Tran] Thiếu box cho 5 người: 2 người quay lưng ở xa nhất; 1 bé trai áo cam giữa person #6 và person #10; 2 người ngồi bên gốc cây mép trái, phía sau person #0."
+000000012748,missing_box,confirmed,[Tien] Ảnh có người bố và em bé nhưng chỉ thấy một box person cho cả cụm; một trong hai người không có box riêng.
+000000013348,instance_merge,rejected,"[Trinh] mang tim chi la 1 may bay nho o xa phia sau (#6) co khung rieng, nam lot trong khung to cua may bay lon phia truoc (#0) nen bi bao nham"
+000000013546,instance_merge,rejected,"[Dang] Mask tím chỉ phủ một người nhỏ đứng ở nền phía sau (person #1), không gộp với người trượt ván phía trước do cánh tay giơ cao làm box vàng chồng mép"
+000000013659,instance_merge,confirmed,"[Sang] Hai chiếc ghế riêng biệt ở khu làm việc có vẻ nằm trong cùng một segment chair, detection tách thành hai box."
+000000013729,instance_merge,rejected,"[Tran] Box detection remote #4 bao rộng, nhưng không thấy mask panoptic gộp hai remote thành một segment; box rộng riêng chưa phải lỗi instance_merge."
+000000014038,instance_merge,rejected,"[Tien] Mask book nằm trên một gáy sách nhỏ; box chồng do các cuốn xếp sát nhau, không thấy mask nào gộp nhiều cuốn."
+000000015335,instance_merge,rejected,"[Trinh] goc tren phai trong nhu 1 mang tim lien nhung thuc ra la nhieu nguoi dung sat nhau phia sau (#5, #6, #8, #13), moi vung tim khop dung 1 khung vang rieng cua nguoi do; ca cum nam trong khung to cua nguoi dung truoc (#1) nen bi bao nham, khong co segment nao gop 2 nguoi; mang tim #10 cung chi 1 nguoi"
+000000015517,instance_merge,rejected,"[Dang] Mask tím chỉ phủ đúng một xe buýt ở giữa (bus #3) nằm chồng lên mép hai box vàng bus #6 và bus #5 xung quanh, không phải gộp 2 xe"
+000000016958,missing_box,confirmed,[Sang] Ảnh có chiếc ghế ở góc dưới bên phải nhưng panoptic đánh chair mà không có box detection chair tương ứng.
+000000017182,instance_merge,confirmed,[Tran] Cả hai box vàng đều bao gồm nhiều quyển sách; mỗi box đang gom các quyển riêng vào cùng một box.
+000000017627,instance_merge,rejected,"[Tien] Các mask ứng viên là mảng nhỏ trên từng xe; box chồng do xe đậu sát và bị che, ảnh không cho thấy mask gộp hai xe."
+000000017959,instance_merge,rejected,"[Trinh] nhieu dieu ca va dieu duoi dai bay chong len nhau; mang tim chi phu 1 con dieu, chi bi khung to cua dieu khac (#13, #15) trum len nen bi bao nham"
+000000018380,instance_merge,rejected,"[Dang] Mask tím chỉ phủ riêng một người đứng giữa (person #21), nằm giao vào mép của hai box vàng trên và dưới, không phải gộp 2 người"
+000000019109,instance_merge,confirmed,[Sang] Ba chiếc xe máy đứng gần nhau có box detection riêng nhưng một segment motorcycle thể hiện vùng gộp nhiều xe.
+000000020553,instance_merge,rejected,[Tran] Hai box teddybear #3 và #8 khoanh riêng; không box nào bao gồm thêm teddy bear khác.
+000000020571,instance_merge,rejected,"[Tien] Mask boat chỉ là phần nhỏ của tàu bị che; box lớn của tàu tiền cảnh chồng qua vùng này, không phải mask chứa hai tàu."
+000000021503,instance_merge,rejected,"[Trinh] mang tim chi la 1 mieng sandwich nho o mep trai (#7) co khung rieng, nam sat khung to cua mieng banh phia truoc (#6) nen bi bao nham, cac mieng banh khac khong bi gop"
+000000021879,instance_merge,rejected,"[Dang] Mask tím chỉ phủ riêng một người đang bơi phía sau (person #1), nằm lọt trong box vàng của người lướt ván (person #0) nên không phải gộp 2 người"
+000000023126,instance_merge,rejected,[Sang] Chỉ quan sát một con ngựa riêng lẻ cùng người cưỡi; không thấy nhiều instance horse bị gộp.
+000000023751,class_swap,confirmed,[Tran] Box detection gán nhãn bird cho vật thể là cái diều; box panoptic ghi kite phù hợp với hình.
+000000024610,instance_merge,rejected,"[Tien] Segment panoptic book chỉ phủ một gáy sách mảnh; các cuốn bên cạnh có mask riêng, box dài chồng qua kệ nhưng segment không gộp sách."
+000000025057,instance_merge,rejected,"[Trinh] mang tim chi la 1 nguoi nho dung xa phia sau tren co (#2) co khung rieng, cham mep khung to cua nguoi nem dia phia truoc nen bi bao nham"
+000000025386,instance_merge,rejected,"[Dang] Mask tím chỉ phủ một người nhỏ đứng ngoài sân ga sau cửa kính (person #2), bị góc trên phải box vàng person #0 chồng mép, không phải gộp 2 người"

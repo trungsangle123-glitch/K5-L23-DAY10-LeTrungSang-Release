@@ -23,10 +23,17 @@ Báo mọi ứng viên sẽ làm tăng false positive và giảm precision, kéo
 QC v1 có **29 mục lỗi / 250 ảnh (11,6%)**, trên **28 ảnh có phát hiện**; ảnh `000000016958` có hai phát hiện (`invalid_class` và `missing_box`). Tỉ lệ lỗi vượt ngưỡng 2%, nên quyết định **HOLD**. Lineage ghi `R-021: affected=True action=review_or_retrain`; sửa dữ liệu không tự cập nhật model đã train, nên run này phải được xem lại hoặc train lại trước khi phát hành.
 
 ## 4. Hash chứng minh gì, không chứng minh gì?
-<<>>
+- **Hash (SHA-256 trong `manifest.csv` và `.sha256`) chứng minh:** tính toàn vẹn ở mức bit (file ảnh, nhãn và gói `.zip` bàn giao v2 không bị sửa đổi, cắt xén, hỏng hoặc tráo đổi kể từ thời điểm đóng gói). Khi có lỗi `wrong_hash` ở v1, nhóm mở kiểm tra file ảnh trước: ảnh mở được bình thường nên chỉ hỏng/lệch manifest và được tính lại hash mới trong v2; ảnh/nhãn v2 giữ nguyên không sửa tay.
+- **Hash KHÔNG chứng minh:** nội dung gán nhãn là đúng về mặt ngữ nghĩa. Một file `.txt` gán nhầm lớp (`class_swap`), lệch khung (`bbox_drift`) hay thiếu box (`missing_box`) vẫn cho ra mã SHA-256 hợp lệ; chất lượng nhãn vẫn phải kiểm tra bằng đối chiếu nguồn và review bằng mắt.
 
 ## 5. Truy vết
-<<Tiêu chí tầng a/b, vì sao lấy guideline theo job.>>
+- **Tiêu chí phân tầng (`validator/trace_ticket.py`):**
+  - Đọc `incoming/ticket.md` và `guideline/changelog.md` để xác định các `scene_id` team AI nêu (`scene_449`, `scene_699`), phiên bản guideline mới nhất (`v1.3`) và lớp bị đổi quy tắc (`surfboard`).
+  - **`tier_a`:** ảnh thuộc các `scene_id` team AI đã báo, nằm trong job dùng guideline cũ (`v1.2`), và có ít nhất một box detection lớp `surfboard` trong `labels/` của lô.
+  - **`tier_b`:** các ảnh khác cũng thuộc job guideline cũ (`v1.2`) và có box `surfboard` nhưng chưa được team AI báo trong ticket.
+  - **`notify`:** tập mã `annotator` và `reviewer` của các job chứa ảnh thuộc `tier_a` và `tier_b` (tra từ `jobs.csv`).
+- **Vì sao lấy guideline theo job (`jobs.csv`) chứ không theo metadata ảnh (`metadata.json`):** vì `guideline_version` ghi ở từng ảnh trong `metadata.json` có thể đang bị lỗi `guideline_mismatch` (không phản ánh đúng quy tắc áp dụng cho job đó). Lấy theo `jobs.csv` bảo đảm truy vết đúng các ảnh thực sự được gán theo guideline cũ.
+- **Kết quả trên seed 34:** `tier_a = 2`, `tier_b = 4`, `notify = 4`; tự kiểm bằng `score_findings.py` đạt `tier_a 1.0 · tier_b 1.0 · notify 1.0`.
 
 ## 6. Bug hoặc điểm chưa rõ trong lab (nếu có)
 <<>>
