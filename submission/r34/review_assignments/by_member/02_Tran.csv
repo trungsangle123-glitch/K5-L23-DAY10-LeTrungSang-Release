@@ -7,7 +7,7 @@ image,type,verdict,note
 000000010092,instance_merge,rejected,Hai chiếc ghế được khoanh bằng hai box riêng; không có box nào gồm cả hai ghế.
 000000012639,instance_merge,rejected,Person #12 và person #2 nằm trong hai box riêng; không có box nào gồm họ với người khác.
 000000012639,missing_box,confirmed,"Thiếu box cho 5 người: 2 người quay lưng ở xa nhất; 1 bé trai áo cam giữa person #6 và person #10; 2 người ngồi bên gốc cây mép trái, phía sau person #0."
-000000013729,instance_merge,confirmed,Hai chiếc remote riêng bị khoanh chung trong một box remote #4.
+000000013729,instance_merge,rejected,"Box detection remote #4 bao rộng, nhưng không thấy mask panoptic gộp hai remote thành một segment; box rộng riêng chưa phải lỗi instance_merge."
 000000017182,instance_merge,confirmed,Cả hai box vàng đều bao gồm nhiều quyển sách; mỗi box đang gom các quyển riêng vào cùng một box.
 000000020553,instance_merge,rejected,Hai box teddybear #3 và #8 khoanh riêng; không box nào bao gồm thêm teddy bear khác.
 000000023751,class_swap,confirmed,Box detection gán nhãn bird cho vật thể là cái diều; box panoptic ghi kite phù hợp với hình.
