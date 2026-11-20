@@ -57,36 +57,32 @@ py scripts/score_findings.py --run runs/r34
 
 `score_findings.py` dùng để tự đo tiến độ. Không dùng điểm để dò đáp án; không đọc `_private/`, annotation COCO gốc hay dữ liệu ngoài `delivery/` trong validator.
 
-## Kịch bản đề ẩn (40 phút)
+## Đề ẩn đang review (40 phút)
 
-Đã diễn tập trên lô giả `inject_release.py --seed 99 --opaque` (tên ảnh `img_xxxx` như đề ẩn): validator khoảng 30 giây, vẽ overlay khoảng 5 giây, chia việc dưới 1 giây. Gần như toàn bộ 40 phút dành cho xem ảnh. Trước giờ làm đề: **`git pull`** để có bản mới của `validator/`.
+Đề hiện có trong `submission/de_an/delivery/`. Sau `git pull`, mở file [hàng đợi](../submission/de_an/review_assignments/index.html) bằng trình duyệt trên máy từ checkout local; các ảnh overlay và CSV cá nhân đã được chuẩn bị trong repo. Có **55 dòng ứng viên trên 54 ảnh**, chia trọn ảnh cho một người: bốn người nhận 11 ảnh, Đăng nhận 10 ảnh.
 
-| Phút | Việc | Ai |
+| Thành viên | Gallery cần mở | CSV cần điền |
 |---|---|---|
-| 0–3 | Tải `de_an.zip`, giải nén vào gốc repo (được `delivery/`), chạy 3 lệnh máy bên dưới | Trinh |
-| 3–30 | Mỗi người mở trang HTML của mình, điền CSV cá nhân (khoảng 11 ảnh/người) | Cả nhóm |
-| 3–30 | Làm `submission/de_an/trace.json` (song song với review) | Đăng |
-| 30–33 | Gom 5 CSV về `runs/de_an/review_assignments/by_member/`, chạy lệnh gộp; nếu script báo DỪNG thì nhắn đúng người sửa dòng bị nêu | Trinh |
-| 33–40 | Kiểm `submission/de_an/` đủ 4 file, commit, push (không commit `delivery/`) | Sang |
+| Lê Trung Sang | [01 gallery](../submission/de_an/review_assignments/by_member/01_le_trung_sang.html) | [01 CSV](../submission/de_an/review_assignments/by_member/01_le_trung_sang.csv) |
+| Lương Hoàng Bảo Trân | [02 gallery](../submission/de_an/review_assignments/by_member/02_luong_hoang_bao_tran.html) | [02 CSV](../submission/de_an/review_assignments/by_member/02_luong_hoang_bao_tran.csv) |
+| Nguyễn Anh Tiến | [03 gallery](../submission/de_an/review_assignments/by_member/03_nguyen_anh_tien.html) | [03 CSV](../submission/de_an/review_assignments/by_member/03_nguyen_anh_tien.csv) |
+| Vũ Tuyết Trinh | [04 gallery](../submission/de_an/review_assignments/by_member/04_vu_tuyet_trinh.html) | [04 CSV](../submission/de_an/review_assignments/by_member/04_vu_tuyet_trinh.csv) |
+| Phan Hải Đăng | [05 gallery](../submission/de_an/review_assignments/by_member/05_phan_hai_ang.html) | [05 CSV](../submission/de_an/review_assignments/by_member/05_phan_hai_ang.csv) |
 
-Lệnh máy (chạy từ gốc repo, PowerShell):
+### Mỗi người review ảnh được giao
 
-```powershell
-$env:PYTHONUTF8 = '1'
-py validator/validate.py delivery --out runs/de_an/rules.json --candidates submission/de_an/candidates.json
-py validator/view_candidates.py --delivery delivery --candidates submission/de_an/candidates.json --out runs/de_an/review_previews
-py scripts/split_review_queue.py --candidates submission/de_an/candidates.json --out runs/de_an/review_assignments --members Sang Tran Tien Trinh Dang
-```
+1. Mở gallery cá nhân; xem overlay và vật trong ảnh. Không tự lọc từ cả lô, cũng không đổi ảnh đã giao cho người khác.
+2. Điền `verdict` là `confirmed` hoặc `rejected` cho từng dòng trong CSV cá nhân. Note phải dài ít nhất 20 ký tự, nói cụ thể nhìn thấy gì; không dùng một note lặp lại cho nhiều dòng.
+3. Với `class_disagreement`, nếu confirmed thì đổi `type` thành `class_swap` khi detection sai hoặc `category_swap` khi panoptic sai; nếu rejected thì giữ `class_disagreement` và ghi lý do.
+4. Chỉ người trong nhóm kết luận confirmed/rejected bằng cách xem ảnh; AI không thay việc review bằng mắt.
 
-Mở `runs/de_an/review_assignments/index.html` để vào trang của từng người. Nếu mỗi người làm trên máy riêng thì mỗi máy chạy cùng ba lệnh trên (kết quả chia việc giống nhau), rồi gửi CSV cá nhân đã điền cho Trinh.
+### Trinh/Tiến tổng hợp sau khi đủ 5 CSV
 
-Gộp (dừng và không ghi file nếu còn verdict sai chữ, thiếu dòng, note dưới 20 ký tự hoặc note trùng):
+Chạy từ gốc repo. Lệnh chuẩn hóa sẽ dừng và không ghi file nếu thiếu ứng viên, sai verdict, note ngắn hoặc note bị lặp. Sau đó merge các lỗi luật với những ứng viên đã confirmed:
 
 ```powershell
-py validator/normalize_review.py --reviews runs/de_an/review_assignments/by_member --candidates submission/de_an/candidates.json --out submission/de_an/review_log.csv --rules runs/de_an/rules.json --errors submission/de_an/errors.json
+py -X utf8 validator/normalize_review.py --reviews submission/de_an/review_assignments/by_member --candidates submission/de_an/candidates.json --out submission/de_an/review_log.csv
+py -X utf8 scripts/merge_review.py --rules submission/de_an/rules.json --review submission/de_an/review_log.csv --out submission/de_an/errors.json
 ```
 
-Lưu ý khi review đề ẩn:
-- Bất đồng lớp: mở ảnh xem vật thật là gì. Detection sai thì ghi `class_swap`, panoptic sai thì ghi `category_swap`; bác thì giữ `class_disagreement` + `rejected`.
-- `instance_merge`: chỉ nhìn **segment có viền riêng**. Segment rất nhỏ (vài chục pixel) gần như không thể phủ hai vật.
-- Note nói **thấy gì** trong ảnh, mỗi dòng một câu khác nhau.
+Không sửa `submission/de_an/delivery/`, không đọc `_private/` và không dùng `score_findings.py --truth-dir`. Khi hoàn tất các bước tiếp theo, chỉ commit kết quả nộp trong `submission/de_an/`, không thêm dữ liệu đáp án riêng.

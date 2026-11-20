@@ -1,0 +1,55 @@
+image,assigned_to,candidate_types,preview
+img_0002,LÊ TRUNG SANG,instance_merge,../review_previews/img_0002.jpg
+img_0006,LƯƠNG HOÀNG BẢO TRÂN,missing_box,../review_previews/img_0006.jpg
+img_0009,NGUYỄN ANH TIẾN,instance_merge,../review_previews/img_0009.jpg
+img_0023,VŨ TUYẾT TRINH,instance_merge,../review_previews/img_0023.jpg
+img_0024,PHAN HẢI ĐĂNG,instance_merge,../review_previews/img_0024.jpg
+img_0025,LÊ TRUNG SANG,instance_merge,../review_previews/img_0025.jpg
+img_0037,LƯƠNG HOÀNG BẢO TRÂN,instance_merge,../review_previews/img_0037.jpg
+img_0039,NGUYỄN ANH TIẾN,instance_merge,../review_previews/img_0039.jpg
+img_0048,VŨ TUYẾT TRINH,class_disagreement,../review_previews/img_0048.jpg
+img_0051,PHAN HẢI ĐĂNG,instance_merge,../review_previews/img_0051.jpg
+img_0052,LÊ TRUNG SANG,instance_merge,../review_previews/img_0052.jpg
+img_0060,LƯƠNG HOÀNG BẢO TRÂN,instance_merge,../review_previews/img_0060.jpg
+img_0064,NGUYỄN ANH TIẾN,instance_merge,../review_previews/img_0064.jpg
+img_0078,VŨ TUYẾT TRINH,instance_merge,../review_previews/img_0078.jpg
+img_0079,PHAN HẢI ĐĂNG,instance_merge,../review_previews/img_0079.jpg
+img_0091,LÊ TRUNG SANG,instance_merge,../review_previews/img_0091.jpg
+img_0093,LƯƠNG HOÀNG BẢO TRÂN,instance_merge,../review_previews/img_0093.jpg
+img_0097,NGUYỄN ANH TIẾN,class_disagreement,../review_previews/img_0097.jpg
+img_0098,VŨ TUYẾT TRINH,instance_merge,../review_previews/img_0098.jpg
+img_0106,PHAN HẢI ĐĂNG,instance_merge,../review_previews/img_0106.jpg
+img_0107,LÊ TRUNG SANG,instance_merge,../review_previews/img_0107.jpg
+img_0115,LƯƠNG HOÀNG BẢO TRÂN,instance_merge,../review_previews/img_0115.jpg
+img_0117,NGUYỄN ANH TIẾN,instance_merge,../review_previews/img_0117.jpg
+img_0118,VŨ TUYẾT TRINH,instance_merge,../review_previews/img_0118.jpg
+img_0119,PHAN HẢI ĐĂNG,instance_merge,../review_previews/img_0119.jpg
+img_0120,LÊ TRUNG SANG,instance_merge,../review_previews/img_0120.jpg
+img_0123,LƯƠNG HOÀNG BẢO TRÂN,instance_merge,../review_previews/img_0123.jpg
+img_0134,NGUYỄN ANH TIẾN,instance_merge,../review_previews/img_0134.jpg
+img_0136,VŨ TUYẾT TRINH,instance_merge,../review_previews/img_0136.jpg
+img_0140,PHAN HẢI ĐĂNG,instance_merge,../review_previews/img_0140.jpg
+img_0150,LÊ TRUNG SANG,instance_merge,../review_previews/img_0150.jpg
+img_0164,LƯƠNG HOÀNG BẢO TRÂN,instance_merge,../review_previews/img_0164.jpg
+img_0167,NGUYỄN ANH TIẾN,instance_merge,../review_previews/img_0167.jpg
+img_0168,VŨ TUYẾT TRINH,instance_merge,../review_previews/img_0168.jpg
+img_0170,PHAN HẢI ĐĂNG,instance_merge,../review_previews/img_0170.jpg
+img_0173,LÊ TRUNG SANG,instance_merge,../review_previews/img_0173.jpg
+img_0176,LƯƠNG HOÀNG BẢO TRÂN,missing_box,../review_previews/img_0176.jpg
+img_0181,NGUYỄN ANH TIẾN,missing_box,../review_previews/img_0181.jpg
+img_0183,VŨ TUYẾT TRINH,missing_box,../review_previews/img_0183.jpg
+img_0190,PHAN HẢI ĐĂNG,instance_merge,../review_previews/img_0190.jpg
+img_0205,LÊ TRUNG SANG,bbox_drift;instance_merge,../review_previews/img_0205.jpg
+img_0207,LƯƠNG HOÀNG BẢO TRÂN,instance_merge,../review_previews/img_0207.jpg
+img_0210,NGUYỄN ANH TIẾN,instance_merge,../review_previews/img_0210.jpg
+img_0212,VŨ TUYẾT TRINH,instance_merge,../review_previews/img_0212.jpg
+img_0217,PHAN HẢI ĐĂNG,instance_merge,../review_previews/img_0217.jpg
+img_0219,LÊ TRUNG SANG,instance_merge,../review_previews/img_0219.jpg
+img_0225,LƯƠNG HOÀNG BẢO TRÂN,instance_merge,../review_previews/img_0225.jpg
+img_0226,NGUYỄN ANH TIẾN,instance_merge,../review_previews/img_0226.jpg
+img_0230,VŨ TUYẾT TRINH,instance_merge,../review_previews/img_0230.jpg
+img_0237,PHAN HẢI ĐĂNG,instance_merge,../review_previews/img_0237.jpg
+img_0243,LÊ TRUNG SANG,instance_merge,../review_previews/img_0243.jpg
+img_0245,LƯƠNG HOÀNG BẢO TRÂN,instance_merge,../review_previews/img_0245.jpg
+img_0247,NGUYỄN ANH TIẾN,class_disagreement,../review_previews/img_0247.jpg
+img_0250,VŨ TUYẾT TRINH,instance_merge,../review_previews/img_0250.jpg

@@ -1,0 +1,56 @@
+﻿image,candidate_type,suggested_error_types,evidence_count,evidence_summary
+img_0002,instance_merge,instance_merge,1,panoptic=person; distinct_box_pairs=1
+img_0006,missing_box,missing_box,1,panoptic=person; pixels=3931; nearest_IoU=0.1252
+img_0009,instance_merge,instance_merge,1,panoptic=banana; distinct_box_pairs=1
+img_0023,instance_merge,instance_merge,1,panoptic=person; distinct_box_pairs=1
+img_0024,instance_merge,instance_merge,2,panoptic=car; distinct_box_pairs=1
+img_0025,instance_merge,instance_merge,1,panoptic=person; distinct_box_pairs=1
+img_0037,instance_merge,instance_merge,1,panoptic=boat; distinct_box_pairs=1
+img_0039,instance_merge,instance_merge,1,panoptic=broccoli; distinct_box_pairs=3
+img_0048,class_disagreement,class_swap;category_swap,1,detection=couch; panoptic=microwave; IoU=0.9956; mask_coverage=1.0
+img_0051,instance_merge,instance_merge,2,panoptic=bicycle; distinct_box_pairs=1
+img_0052,instance_merge,instance_merge,1,panoptic=car; distinct_box_pairs=1
+img_0060,instance_merge,instance_merge,4,panoptic=person; distinct_box_pairs=1
+img_0064,instance_merge,instance_merge,1,panoptic=bench; distinct_box_pairs=1
+img_0078,instance_merge,instance_merge,2,panoptic=hot dog; distinct_box_pairs=1
+img_0079,instance_merge,instance_merge,1,panoptic=umbrella; distinct_box_pairs=1
+img_0091,instance_merge,instance_merge,3,panoptic=person; distinct_box_pairs=1
+img_0093,instance_merge,instance_merge,1,panoptic=bench; distinct_box_pairs=1
+img_0097,class_disagreement,class_swap;category_swap,1,detection=laptop; panoptic=tv; IoU=0.9904; mask_coverage=1.0
+img_0098,instance_merge,instance_merge,3,panoptic=person; distinct_box_pairs=2
+img_0106,instance_merge,instance_merge,5,panoptic=person; distinct_box_pairs=2
+img_0107,instance_merge,instance_merge,5,panoptic=bicycle; distinct_box_pairs=1
+img_0115,instance_merge,instance_merge,2,panoptic=boat; distinct_box_pairs=1
+img_0117,instance_merge,instance_merge,7,panoptic=person; distinct_box_pairs=1
+img_0118,instance_merge,instance_merge,1,panoptic=car; distinct_box_pairs=3
+img_0119,instance_merge,instance_merge,2,panoptic=person; distinct_box_pairs=1
+img_0120,instance_merge,instance_merge,1,panoptic=person; distinct_box_pairs=1
+img_0123,instance_merge,instance_merge,1,panoptic=person; distinct_box_pairs=1
+img_0134,instance_merge,instance_merge,1,panoptic=motorcycle; distinct_box_pairs=1
+img_0136,instance_merge,instance_merge,1,panoptic=person; distinct_box_pairs=1
+img_0140,instance_merge,instance_merge,1,panoptic=person; distinct_box_pairs=1
+img_0150,instance_merge,instance_merge,1,panoptic=person; distinct_box_pairs=1
+img_0164,instance_merge,instance_merge,3,panoptic=chair; distinct_box_pairs=1
+img_0167,instance_merge,instance_merge,3,panoptic=chair; distinct_box_pairs=1
+img_0168,instance_merge,instance_merge,1,panoptic=person; distinct_box_pairs=1
+img_0170,instance_merge,instance_merge,1,panoptic=horse; distinct_box_pairs=1
+img_0173,instance_merge,instance_merge,1,panoptic=person; distinct_box_pairs=1
+img_0176,missing_box,missing_box,1,panoptic=person; pixels=60428; nearest_IoU=0.1499
+img_0181,missing_box,missing_box,1,panoptic=bus; pixels=6639; nearest_IoU=0.1084
+img_0183,missing_box,missing_box,1,panoptic=person; pixels=1552; nearest_IoU=0.7539
+img_0190,instance_merge,instance_merge,1,panoptic=traffic light; distinct_box_pairs=1
+img_0205,bbox_drift,bbox_drift,1,class=suitcase; IoU=0.029; mask_coverage=0.6072
+img_0205,instance_merge,instance_merge,1,panoptic=suitcase; distinct_box_pairs=1
+img_0207,instance_merge,instance_merge,3,panoptic=cow; distinct_box_pairs=1
+img_0210,instance_merge,instance_merge,1,panoptic=dining table; distinct_box_pairs=1
+img_0212,instance_merge,instance_merge,2,panoptic=person; distinct_box_pairs=1
+img_0217,instance_merge,instance_merge,2,panoptic=person; distinct_box_pairs=1
+img_0219,instance_merge,instance_merge,1,panoptic=person; distinct_box_pairs=1
+img_0225,instance_merge,instance_merge,1,panoptic=chair; distinct_box_pairs=1
+img_0226,instance_merge,instance_merge,1,panoptic=person; distinct_box_pairs=1
+img_0230,instance_merge,instance_merge,1,panoptic=donut; distinct_box_pairs=3
+img_0237,instance_merge,instance_merge,3,panoptic=boat; distinct_box_pairs=1
+img_0243,instance_merge,instance_merge,1,panoptic=motorcycle; distinct_box_pairs=1
+img_0245,instance_merge,instance_merge,3,panoptic=person; distinct_box_pairs=1
+img_0247,class_disagreement,class_swap;category_swap,1,detection=kite; panoptic=bird; IoU=0.8799; mask_coverage=1.0
+img_0250,instance_merge,instance_merge,1,panoptic=person; distinct_box_pairs=1

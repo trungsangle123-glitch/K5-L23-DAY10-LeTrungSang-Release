@@ -1,0 +1,12 @@
+image,type,verdict,note
+img_0023,instance_merge,,
+img_0048,class_disagreement,,
+img_0078,instance_merge,,
+img_0098,instance_merge,,
+img_0118,instance_merge,,
+img_0136,instance_merge,,
+img_0168,instance_merge,,
+img_0183,missing_box,,
+img_0212,instance_merge,,
+img_0230,instance_merge,,
+img_0250,instance_merge,,
