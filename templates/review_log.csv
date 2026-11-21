@@ -1,3 +1,0 @@
-image,type,verdict,note
-000000999007,class_swap,confirmed,"mở ảnh: xe tải mui kín, nhãn detection ghi car; panoptic ghi truck đúng"
-000000999009,bbox_drift,rejected,"box lệch mask do vật bị che một phần; nhãn hợp lý"
